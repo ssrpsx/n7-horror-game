@@ -1,6 +1,6 @@
 # Midnight Shadows Game
 
-**Midnight Shadows** is a 2D pixel art story-driven horror game created by a team of 7 students during our first year at university. The project is a blend of storytelling, suspense, and psychological horror, wrapped in nostalgic pixel-style visuals.
+**Midnight Shadows** is a 2D pixel art story-driven horror game created by a team of 6 students during our first year at university. The project is a blend of storytelling, suspense, and psychological horror, wrapped in nostalgic pixel-style visuals.
 
 ## 🎮 Game Concept
 
@@ -18,12 +18,12 @@ A mysterious and charming upperclassman, who is widely admired across campus, hi
 
 ## 🧑‍💻 Our Team
 
-This project was developed by 7 university friends as a creative and technical collaboration during our first year. We worked together to bring a thrilling and emotional horror story to life.
+This project was developed by 6 university friends as a creative and technical collaboration during our first year. We worked together to bring a thrilling and emotional horror story to life.
 
 ## 🔮 What's Next?
 
 What really happened that night in the lecture building?  
-Will Lucia escape? Or will she be caught in the darkness that stalks the university halls?
+Will Lucia escape? Or will she be caught in the darkness that stalks the university halls(N7)?
 
 **Find out in the game... if you dare.**
 
