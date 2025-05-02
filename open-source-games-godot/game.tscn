@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bq5r5vcemryv1"]
+[gd_scene load_steps=20 format=3 uid="uid://bq5r5vcemryv1"]
 
 [ext_resource type="Texture2D" uid="uid://b5mvwhxfdbq50" path="res://sprite/boy_34_side_idle.png" id="1_80nbo"]
 [ext_resource type="Texture2D" uid="uid://dgaokeuule30" path="res://background/N7/image.jpg" id="1_feb5d"]
@@ -76,6 +76,29 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ryrav"]
 size = Vector2(48, 120.5)
 
+[sub_resource type="Gradient" id="Gradient_fc0e3"]
+offsets = PackedFloat32Array(0.142857, 0.753247)
+colors = PackedColorArray(1, 1, 1, 0.584314, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7jktm"]
+gradient = SubResource("Gradient_fc0e3")
+width = 150
+height = 150
+fill = 1
+fill_from = Vector2(0.486239, 0.490826)
+fill_to = Vector2(0.0779817, 0.889908)
+
+[sub_resource type="Gradient" id="Gradient_7jktm"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.220779, 1)
+colors = PackedColorArray(1, 0.91271, 0.724778, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ryrav"]
+gradient = SubResource("Gradient_7jktm")
+fill = 1
+fill_from = Vector2(0.568807, 0.362385)
+fill_to = Vector2(0, 0)
+
 [node name="Bedroom2D" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -98,6 +121,9 @@ position = Vector2(-422.05, 0.758553)
 scale = Vector2(0.203041, 0.203041)
 shape = SubResource("RectangleShape2D_7jktm")
 
+[node name="CanvasModulate" type="CanvasModulate" parent="Sprite2D/StaticBody2D"]
+color = Color(0.051971, 0.051971, 0.051971, 0.882353)
+
 [node name="Player" type="CharacterBody2D" parent="."]
 z_index = 1
 position = Vector2(-367, 39)
@@ -115,9 +141,27 @@ position = Vector2(-2, -0.25)
 shape = SubResource("RectangleShape2D_ryrav")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(98, -3)
 limit_left = -426
 limit_top = -120
 limit_right = 426
 limit_bottom = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
+
+[node name="PointLight2D3" type="PointLight2D" parent="Player"]
+position = Vector2(6, -15)
+scale = Vector2(192.642, 174.219)
+energy = 1.2
+texture = SubResource("GradientTexture2D_7jktm")
+texture_scale = 0.01
+
+[node name="PointLight2D2" type="PointLight2D" parent="Player"]
+position = Vector2(217.476, -11.6678)
+rotation = -0.602139
+scale = Vector2(3.37228, 3.43067)
+skew = -0.31765
+energy = 1.5
+shadow_filter = 1
+shadow_item_cull_mask = 3
+texture = SubResource("GradientTexture2D_ryrav")
