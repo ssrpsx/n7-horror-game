@@ -1,7 +1,10 @@
 extends CharacterBody2D
 
-const speed = 150.0
+const speed = 110.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+@onready var sprite = $AnimatedSprite2D
+@onready var light = $PointLight2D
+@onready var camera = $Camera2D
 
 func _physics_process(delta):
 	# แรงโน้มถ่วง
@@ -15,12 +18,24 @@ func _physics_process(delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 	
+	# อัปเดต animation และไฟ
 	if velocity.x < 0:
-		get_node("AnimatedSprite2D").play("walk")
-		get_node("AnimatedSprite2D").set_flip_h(true)
+		# เดินไปทางซ้าย
+		sprite.play("walk")
+		sprite.flip_h = true
+		camera.position = sprite.position + Vector2(-118, 0)  # ไฟอยู่ทางซ้ายของตัวละคร
+		light.position = sprite.position + Vector2(-202, -13)
+		light.texture = preload("res://sprite/flashlight_left.png")
+		
 	elif velocity.x > 0:
-		get_node("AnimatedSprite2D").play("walk")
-		get_node("AnimatedSprite2D").set_flip_h(false)
+		# เดินไปทางขวา
+		sprite.play("walk")
+		sprite.flip_h = false
+		camera.position = sprite.position + Vector2(118, 0)  # ไฟอยู่ทางขวาของตัวละคร
+		light.position = sprite.position + Vector2(202, -13)
+		light.texture = preload("res://sprite/flashlight_right.png")
 	else:
-		get_node("AnimatedSprite2D").play("idle")
+		# ถ้าไม่เคลื่อนที่
+		sprite.play("idle")
+
 	move_and_slide()

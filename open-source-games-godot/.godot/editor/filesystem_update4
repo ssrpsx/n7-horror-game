@@ -1,1 +1,6 @@
 res://game.tscn
+res://point_light_2d.gd
+res://control.tscn
+res://ui.tscn
+res://control.gd
+res://player.gd

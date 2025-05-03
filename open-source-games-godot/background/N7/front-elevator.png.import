@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://km7go36d7m1r"
-path="res://.godot/imported/bedroom.png-369670bae5111d541255e2e8ad99e8c0.ctex"
+uid="uid://dqf1ohpggm03q"
+path="res://.godot/imported/front-elevator.png-4ded763c0e4db2b24a7baf675a99870d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://background/bedroom/bedroom.png"
-dest_files=["res://.godot/imported/bedroom.png-369670bae5111d541255e2e8ad99e8c0.ctex"]
+source_file="res://background/N7/front-elevator.png"
+dest_files=["res://.godot/imported/front-elevator.png-4ded763c0e4db2b24a7baf675a99870d.ctex"]
 
 [params]
 
