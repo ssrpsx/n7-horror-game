@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://da462rmr5itij"]
+
+[ext_resource type="Script" uid="uid://caokkmxfh3eiw" path="res://front-elevator.gd" id="1_2uso5"]
+[ext_resource type="Texture2D" uid="uid://dqf1ohpggm03q" path="res://background/N7/front-elevator.png" id="2_x7yk8"]
+[ext_resource type="Script" uid="uid://dvjtmsb7f2jjw" path="res://point_light_2d.gd" id="3_gofhh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fc0e3"]
+size = Vector2(4203.24, 99.9579)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jktm"]
+size = Vector2(9.1377, 1194.42)
+
+[sub_resource type="Gradient" id="Gradient_eow3j"]
+offsets = PackedFloat32Array(0.0714286, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_j5wjh"]
+gradient = SubResource("Gradient_eow3j")
+fill = 1
+fill_from = Vector2(0.513761, 0)
+fill_to = Vector2(0.724771, 0.444954)
+
+[node name="front-elevator" type="Node2D"]
+script = ExtResource("1_2uso5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-5, 0)
+texture = ExtResource("2_x7yk8")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Sprite2D"]
+z_index = 1
+color = Color(0.0509804, 0.0509804, 0.0509804, 0.960784)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(-0.663208, 110.354)
+scale = Vector2(0.203041, 0.203041)
+shape = SubResource("RectangleShape2D_fc0e3")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(422.499, -0.256256)
+scale = Vector2(0.203041, 0.203041)
+shape = SubResource("RectangleShape2D_7jktm")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(-426, 5.96046e-08)
+scale = Vector2(0.203041, 0.203041)
+shape = SubResource("RectangleShape2D_7jktm")
+
+[node name="PointLight2D" type="PointLight2D" parent="Sprite2D"]
+z_index = 1
+position = Vector2(68, 92.25)
+scale = Vector2(2.1875, 4.66406)
+energy = 4.0
+texture = SubResource("GradientTexture2D_j5wjh")
+script = ExtResource("3_gofhh")
