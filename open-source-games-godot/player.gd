@@ -5,37 +5,43 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var sprite = $AnimatedSprite2D
 @onready var light = $PointLight2D
 @onready var camera = $Camera2D
+var flashlight_on = false
+
+func _input(event):
+	if event.is_action_pressed("ui_select"):  # กด F หรือปุ่มที่คุณตั้งค่า
+		toggle_flashlight()
+
+func toggle_flashlight():
+	flashlight_on = !flashlight_on  # สลับสถานะ
+	light.enabled = flashlight_on  # เปิดหรือปิดไฟฉาย
 
 func _physics_process(delta):
 	# แรงโน้มถ่วง
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
-	# การเคลื่อนที่ซ้ายขวา
+	# การเคลื่อนที่
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * speed
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
-	
-	# อัปเดต animation และไฟ
+
+	# การเล่นแอนิเมชั่นและการตั้งค่าตำแหน่งของไฟฉาย
 	if velocity.x < 0:
-		# เดินไปทางซ้าย
 		sprite.play("walk")
 		sprite.flip_h = true
-		camera.position = sprite.position + Vector2(-118, 0)  # ไฟอยู่ทางซ้ายของตัวละคร
+		camera.position = sprite.position + Vector2(-118, 0)
 		light.position = sprite.position + Vector2(-202, -13)
 		light.texture = preload("res://sprite/flashlight_left.png")
 		
 	elif velocity.x > 0:
-		# เดินไปทางขวา
 		sprite.play("walk")
 		sprite.flip_h = false
-		camera.position = sprite.position + Vector2(118, 0)  # ไฟอยู่ทางขวาของตัวละคร
+		camera.position = sprite.position + Vector2(118, 0)
 		light.position = sprite.position + Vector2(202, -13)
 		light.texture = preload("res://sprite/flashlight_right.png")
 	else:
-		# ถ้าไม่เคลื่อนที่
 		sprite.play("idle")
 
 	move_and_slide()

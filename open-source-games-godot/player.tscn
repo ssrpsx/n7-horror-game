@@ -1,13 +1,13 @@
 [gd_scene load_steps=17 format=3 uid="uid://8kvksiw00xiw"]
 
 [ext_resource type="Script" uid="uid://dgf0x88ivqdlp" path="res://player.gd" id="1_sweqy"]
-[ext_resource type="Texture2D" uid="uid://b5mvwhxfdbq50" path="res://sprite/boy_34_side_idle.png" id="2_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://3cniochymg4n" path="res://sprite/main_34_side_idle.png" id="2_sweqy"]
 [ext_resource type="Texture2D" uid="uid://g8nt4csr6v4b" path="res://sprite/boy_34side_walk.png" id="3_1jxqw"]
 [ext_resource type="Texture2D" uid="uid://dijcx6k8cwxw8" path="res://sprite/flashlight.png" id="4_dw050"]
 [ext_resource type="Texture2D" uid="uid://54w6l8y4vriw" path="res://sprite/heart.png" id="5_b26j0"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e2o6t"]
-atlas = ExtResource("2_2hs0m")
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hs0m"]
+atlas = ExtResource("2_sweqy")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7jktm"]
@@ -38,7 +38,7 @@ region = Rect2(640, 0, 128, 128)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_e2o6t")
+"texture": SubResource("AtlasTexture_2hs0m")
 }],
 "loop": true,
 "name": &"idle",
@@ -100,9 +100,9 @@ shape = SubResource("RectangleShape2D_nvl01")
 
 [node name="PointLight2D3" type="PointLight2D" parent="player"]
 z_index = 2
-position = Vector2(-289, 13.746)
+position = Vector2(-291, 25)
 rotation = 3.14159
-scale = Vector2(342.407, -381.344)
+scale = Vector2(211.387, -235.424)
 shadow_color = Color(1, 0, 0, 0)
 shadow_item_cull_mask = 341
 texture = SubResource("GradientTexture2D_ivps1")

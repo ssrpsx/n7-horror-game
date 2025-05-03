@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://hb16ad7uw85o"
+path="res://.godot/imported/switch-light (mp3cut.net).mp3-e7b9dd79e67d60119bbafe20931fbbf7.mp3str"
+
+[deps]
+
+source_file="res://sound/switch-light (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/switch-light (mp3cut.net).mp3-e7b9dd79e67d60119bbafe20931fbbf7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

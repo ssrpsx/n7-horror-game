@@ -1,11 +1,15 @@
 extends Control
+@onready var dark_screen = $ColorRect
 
 func _on_play_pressed() -> void:
-	get_tree().change_scene_to_file("res://game.tscn")
+	await get_tree().create_timer(0.1).timeout
+	get_tree().change_scene_to_file("res://cutscene.tscn")
 
 func _on_setting_pressed() -> void:
+	await get_tree().create_timer(0.1).timeout
 	pass
 
 
 func _on_exit_pressed() -> void:
+	await get_tree().create_timer(0.1).timeout
 	get_tree().quit()

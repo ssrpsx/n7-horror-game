@@ -1,4 +1,5 @@
 res://player.tscn
+res://cutscene-elevator.gd
 res://front-elevator.tscn
 res://ui.tscn
-res://front-elevator.gd
+res://cutscene.tscn

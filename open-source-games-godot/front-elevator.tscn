@@ -1,8 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://da462rmr5itij"]
+[gd_scene load_steps=13 format=3 uid="uid://da462rmr5itij"]
 
 [ext_resource type="Script" uid="uid://caokkmxfh3eiw" path="res://front-elevator.gd" id="1_2uso5"]
 [ext_resource type="Texture2D" uid="uid://dqf1ohpggm03q" path="res://background/N7/front-elevator.png" id="2_x7yk8"]
 [ext_resource type="Script" uid="uid://dvjtmsb7f2jjw" path="res://point_light_2d.gd" id="3_gofhh"]
+[ext_resource type="AudioStream" uid="uid://bl17882kv7bjh" path="res://sound/bg.mp3" id="4_gofhh"]
+[ext_resource type="AudioStream" uid="uid://bov8m7g5sun5x" path="res://sound/switch-light.mp3" id="5_p3sn4"]
+[ext_resource type="Texture2D" uid="uid://vee6wqwnfbeo" path="res://sprite/boy_34_side_idle1.png" id="5_vogjv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fc0e3"]
 size = Vector2(4203.24, 99.9579)
@@ -19,6 +22,21 @@ gradient = SubResource("Gradient_eow3j")
 fill = 1
 fill_from = Vector2(0.513761, 0)
 fill_to = Vector2(0.724771, 0.444954)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijhgp"]
+atlas = ExtResource("5_vogjv")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gofhh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ijhgp")
+}],
+"loop": true,
+"name": &"idle1",
+"speed": 5.0
+}]
 
 [node name="front-elevator" type="Node2D"]
 script = ExtResource("1_2uso5")
@@ -55,3 +73,25 @@ scale = Vector2(2.1875, 4.66406)
 energy = 4.0
 texture = SubResource("GradientTexture2D_j5wjh")
 script = ExtResource("3_gofhh")
+
+[node name="light" type="AudioStreamPlayer2D" parent="Sprite2D/PointLight2D"]
+position = Vector2(-28.8, -19.7789)
+scale = Vector2(0.457143, 0.214405)
+stream = ExtResource("5_p3sn4")
+volume_db = -5.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite2D"]
+visible = false
+z_index = 10
+position = Vector2(69.25, 30.2034)
+scale = Vector2(0.792969, 0.842195)
+sprite_frames = SubResource("SpriteFrames_gofhh")
+animation = &"idle1"
+frame_progress = 0.277709
+flip_h = true
+
+[node name="bg" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_gofhh")
+volume_db = -15.0
+autoplay = true
+parameters/looping = true
