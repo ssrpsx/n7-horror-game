@@ -2,7 +2,6 @@ extends PointLight2D
 
 var is_active := true
 @onready var sound = $light
-@onready var sprite = $"../AnimatedSprite2D"
 func _ready():
 	flicker_loop()
 
@@ -10,15 +9,11 @@ func flicker_loop() -> void:
 	while is_active:
 		await get_tree().create_timer(2).timeout
 		for i in range(5):
-			sprite.play("idle1")
 			sound.play()
-			if i == 1 or i == 3:
-				sprite.visible = true
+			
 			visible = true
 			await get_tree().create_timer(0.25).timeout
 			
-			if i == 1 or i == 3:
-				sprite.visible = false
 			visible = false
 			await get_tree().create_timer(0.25).timeout
 		

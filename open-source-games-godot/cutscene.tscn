@@ -35,6 +35,7 @@ texture_scale = 2.9
 [node name="up" type="AudioStreamPlayer2D" parent="Sprite2D"]
 position = Vector2(-213, -120)
 stream = ExtResource("3_8vcau")
+volume_db = -10.0
 
 [node name="open" type="AudioStreamPlayer2D" parent="Sprite2D"]
 stream = ExtResource("4_bl24s")

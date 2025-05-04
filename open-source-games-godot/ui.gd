@@ -1,5 +1,5 @@
 extends Control
-@onready var dark_screen = $ColorRect
+
 
 func _on_play_pressed() -> void:
 	await get_tree().create_timer(0.1).timeout
