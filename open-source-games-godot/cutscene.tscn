@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cuqxucu8dk7up"]
 
-[ext_resource type="Texture2D" uid="uid://cnedpbxmajrux" path="res://background/Cutscene/elevator/0zero.png" id="1_8vcau"]
+[ext_resource type="Texture2D" uid="uid://bmkj1khe0qsbb" path="res://background/Cutscene/elevator/0.png" id="1_bl24s"]
 [ext_resource type="Script" uid="uid://bfandia6wppuv" path="res://cutscene-elevator.gd" id="2_ix241"]
 [ext_resource type="AudioStream" uid="uid://b3nwxvenmp7kv" path="res://sound/elevator-up.mp3" id="3_8vcau"]
 [ext_resource type="AudioStream" uid="uid://3u2m5marir6n" path="res://sound/elevator-open.mp3" id="4_bl24s"]
@@ -17,7 +17,7 @@ fill_from = Vector2(0.458716, 0.463303)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(213, 120)
-texture = ExtResource("1_8vcau")
+texture = ExtResource("1_bl24s")
 script = ExtResource("2_ix241")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Sprite2D"]
