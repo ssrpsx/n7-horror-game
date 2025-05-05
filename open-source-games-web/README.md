@@ -1,38 +1,36 @@
-# This folder for web of our game
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-**N7 Game** is a 2D pixel art story-driven horror game created by a team of 6 students during our first year at university. The project is a blend of storytelling, suspense, and psychological horror, wrapped in nostalgic pixel-style visuals.
+## Getting Started
 
-## 🎮 Game Concept
+First, run the development server:
 
-In this game, players take on the role of **Lucia**, a university student who forgets something important in a lecture building. She returns late at night to retrieve it — but what begins as a simple task soon spirals into something far more sinister.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-A mysterious and charming upperclassman, who is widely admired across campus, hides a disturbing secret. What appears to be harmless infatuation quickly turns into a night of psychological horror.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 🕹️ Features
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- 2D pixel graphics with a retro aesthetic  
-- Story-rich gameplay with dialogue and discovery  
-- Psychological horror elements  
-- Atmospheric sound design  
-- Multiple chilling encounters
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## 🧑‍💻 Our Team
+## Learn More
 
-This project was developed by 6 university friends as a creative and technical collaboration during our first year. We worked together to bring a thrilling and emotional horror story to life.
+To learn more about Next.js, take a look at the following resources:
 
-## 🔮 What's Next?
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-What really happened that night in the lecture building?  
-Will Lucia escape? Or will she be caught in the darkness that stalks the university halls(N7)?
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-**Find out in the game... if you dare.**
+## Deploy on Vercel
 
-## 📷 Screenshots
-Waiting for development
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## 📦 Build
-Coming soon to Android via Google Play!
-
----
-
-Feel free to fork, star, or give feedback. This is our very first game, and we're excited to keep learning and improving!
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
