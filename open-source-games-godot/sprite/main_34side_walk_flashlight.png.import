@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vee6wqwnfbeo"
-path="res://.godot/imported/boy_34_side_idle1.png-fcfbd09d9fd3170bd060e48738bae235.ctex"
+uid="uid://csqvfhetslcl0"
+path="res://.godot/imported/main_34side_walk_flashlight.png-8bcb2fb01314fa2ce489b6002bc71000.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/boy_34_side_idle1.png"
-dest_files=["res://.godot/imported/boy_34_side_idle1.png-fcfbd09d9fd3170bd060e48738bae235.ctex"]
+source_file="res://sprite/main_34side_walk_flashlight.png"
+dest_files=["res://.godot/imported/main_34side_walk_flashlight.png-8bcb2fb01314fa2ce489b6002bc71000.ctex"]
 
 [params]
 

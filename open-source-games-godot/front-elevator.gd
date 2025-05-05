@@ -5,6 +5,10 @@ var player_instance
 
 func _ready():
 	player_instance = player_scene.instantiate()
+	
+	# กำหนดตำแหน่งเกิดตรงนี้
+	player_instance.global_position = Vector2(-280, 110)  # เปลี่ยนเป็นตำแหน่งที่คุณต้องการ
+
 	add_child(player_instance)
 	player_instance.z_index = 10
 

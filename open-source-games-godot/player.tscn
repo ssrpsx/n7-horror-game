@@ -1,45 +1,46 @@
-[gd_scene load_steps=30 format=3 uid="uid://8kvksiw00xiw"]
+[gd_scene load_steps=31 format=3 uid="uid://8kvksiw00xiw"]
 
 [ext_resource type="Script" uid="uid://dgf0x88ivqdlp" path="res://player.gd" id="1_sweqy"]
 [ext_resource type="Texture2D" uid="uid://3cniochymg4n" path="res://sprite/main_34_side_idle.png" id="2_sweqy"]
 [ext_resource type="Texture2D" uid="uid://croavagj2gi8q" path="res://sprite/main_34_side_idle_noflashlight.png" id="3_1jxqw"]
-[ext_resource type="Texture2D" uid="uid://g8nt4csr6v4b" path="res://sprite/boy_34side_walk.png" id="3_2hs0m"]
 [ext_resource type="Texture2D" uid="uid://7jejnf4jp1h1" path="res://sprite/main_34side_walk_no_flashlight.png" id="3_sweqy"]
-[ext_resource type="Texture2D" uid="uid://dijcx6k8cwxw8" path="res://sprite/flashlight.png" id="4_dw050"]
+[ext_resource type="Texture2D" uid="uid://csqvfhetslcl0" path="res://sprite/main_34side_walk_flashlight.png" id="4_n7ghd"]
 [ext_resource type="Texture2D" uid="uid://54w6l8y4vriw" path="res://sprite/heart.png" id="5_b26j0"]
+[ext_resource type="Texture2D" uid="uid://bodmydj3x3u3m" path="res://sprite/flashlight_right.png" id="6_b26j0"]
 [ext_resource type="Texture2D" uid="uid://c41dwr0r5aftd" path="res://sprite/jump.png" id="7_b26j0"]
 [ext_resource type="AudioStream" uid="uid://2r3qr2espg73" path="res://sound/g.mp3" id="8_n7ghd"]
+[ext_resource type="Texture2D" uid="uid://c8ufx4phtdc50" path="res://sprite/heart_out.png" id="10_n7ghd"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2hs0m"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_pylmc"]
 atlas = ExtResource("2_sweqy")
 region = Rect2(0, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pylmc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbfsw"]
 atlas = ExtResource("3_1jxqw")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_urp6f"]
-atlas = ExtResource("3_2hs0m")
+atlas = ExtResource("4_n7ghd")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bwjto"]
-atlas = ExtResource("3_2hs0m")
+atlas = ExtResource("4_n7ghd")
 region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_606se"]
-atlas = ExtResource("3_2hs0m")
+atlas = ExtResource("4_n7ghd")
 region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u1c27"]
-atlas = ExtResource("3_2hs0m")
+atlas = ExtResource("4_n7ghd")
 region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_op7ga"]
-atlas = ExtResource("3_2hs0m")
+atlas = ExtResource("4_n7ghd")
 region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q13i1"]
-atlas = ExtResource("3_2hs0m")
+atlas = ExtResource("4_n7ghd")
 region = Rect2(640, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1jxqw"]
@@ -50,13 +51,13 @@ region = Rect2(0, 0, 128, 128)
 atlas = ExtResource("3_sweqy")
 region = Rect2(128, 0, 128, 128)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_b26j0"]
-atlas = ExtResource("3_sweqy")
-region = Rect2(256, 0, 128, 128)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_n7ghd"]
 atlas = ExtResource("3_sweqy")
 region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b26j0"]
+atlas = ExtResource("3_sweqy")
+region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nvl01"]
 atlas = ExtResource("3_sweqy")
@@ -70,7 +71,7 @@ region = Rect2(640, 0, 128, 128)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2hs0m")
+"texture": SubResource("AtlasTexture_pylmc")
 }],
 "loop": true,
 "name": &"idle_flashlight",
@@ -78,7 +79,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pylmc")
+"texture": SubResource("AtlasTexture_pbfsw")
 }],
 "loop": true,
 "name": &"idle_no_flashlight",
@@ -115,10 +116,10 @@ animations = [{
 "texture": SubResource("AtlasTexture_dw050")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_b26j0")
+"texture": SubResource("AtlasTexture_n7ghd")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n7ghd")
+"texture": SubResource("AtlasTexture_b26j0")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nvl01")
@@ -154,9 +155,11 @@ fill = 1
 fill_from = Vector2(0.495413, 0.472477)
 
 [node name="main" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [-34.0]
 
 [node name="player" type="CharacterBody2D" parent="."]
 z_index = 2
+position = Vector2(291, -103)
 script = ExtResource("1_sweqy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player"]
@@ -187,7 +190,7 @@ scale = Vector2(1.06269, 1.06122)
 enabled = false
 color = Color(0.869693, 0.777154, 0.592907, 1)
 energy = 2.25
-texture = ExtResource("4_dw050")
+texture = ExtResource("6_b26j0")
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(-288, 26)
@@ -215,62 +218,68 @@ position = Vector2(-1.70702, 1.81641)
 scale = Vector2(8.55802, 5.69371)
 texture = SubResource("GradientTexture2D_n7ghd")
 
-[node name="Control" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="CanvasLayer" type="CanvasLayer" parent="player"]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+[node name="HBoxContainer" type="HBoxContainer" parent="player/CanvasLayer"]
 z_index = 3
-layout_mode = 1
 anchors_preset = -1
 anchor_left = -3.2
 anchor_top = -3.04
 anchor_bottom = -3.04
-offset_left = -300.0
-offset_top = 50.0
-offset_right = -371.0
+offset_left = 1369.2
+offset_top = 736.6
+offset_right = 146.0
+offset_bottom = 768.6
 grow_vertical = 2
+theme_override_constants/separation = 5
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="Control/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="player/CanvasLayer/HBoxContainer"]
 z_index = 2
-custom_minimum_size = Vector2(48, 48)
+custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 texture = ExtResource("5_b26j0")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect2" type="TextureRect" parent="Control/HBoxContainer"]
+[node name="TextureRect2" type="TextureRect" parent="player/CanvasLayer/HBoxContainer"]
 z_index = 2
-custom_minimum_size = Vector2(48, 48)
+custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 texture = ExtResource("5_b26j0")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect3" type="TextureRect" parent="Control/HBoxContainer"]
+[node name="TextureRect3" type="TextureRect" parent="player/CanvasLayer/HBoxContainer"]
 z_index = 2
-custom_minimum_size = Vector2(48, 48)
+custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 texture = ExtResource("5_b26j0")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect4" type="TextureRect" parent="Control/HBoxContainer"]
+[node name="TextureRect4" type="TextureRect" parent="player/CanvasLayer/HBoxContainer"]
 z_index = 2
-custom_minimum_size = Vector2(48, 48)
+custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
-texture = ExtResource("5_b26j0")
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("10_n7ghd")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="TextureRect5" type="TextureRect" parent="Control/HBoxContainer"]
+[node name="TextureRect5" type="TextureRect" parent="player/CanvasLayer/HBoxContainer"]
 z_index = 2
-custom_minimum_size = Vector2(48, 48)
+custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
-texture = ExtResource("5_b26j0")
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("10_n7ghd")
 expand_mode = 1
 stretch_mode = 5
