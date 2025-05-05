@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://8kvksiw00xiw"]
+[gd_scene load_steps=27 format=3 uid="uid://8kvksiw00xiw"]
 
 [ext_resource type="Script" uid="uid://dgf0x88ivqdlp" path="res://player.gd" id="1_sweqy"]
 [ext_resource type="Texture2D" uid="uid://3cniochymg4n" path="res://sprite/main_34_side_idle.png" id="2_sweqy"]
@@ -7,8 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://csqvfhetslcl0" path="res://sprite/main_34side_walk_flashlight.png" id="4_n7ghd"]
 [ext_resource type="Texture2D" uid="uid://54w6l8y4vriw" path="res://sprite/heart.png" id="5_b26j0"]
 [ext_resource type="Texture2D" uid="uid://bodmydj3x3u3m" path="res://sprite/flashlight_right.png" id="6_b26j0"]
-[ext_resource type="Texture2D" uid="uid://c41dwr0r5aftd" path="res://sprite/jump.png" id="7_b26j0"]
-[ext_resource type="AudioStream" uid="uid://2r3qr2espg73" path="res://sound/g.mp3" id="8_n7ghd"]
 [ext_resource type="Texture2D" uid="uid://c8ufx4phtdc50" path="res://sprite/heart_out.png" id="10_n7ghd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pylmc"]
@@ -145,15 +143,6 @@ fill = 1
 fill_from = Vector2(0.495413, 0.481651)
 fill_to = Vector2(0.93578, 0.0825688)
 
-[sub_resource type="Gradient" id="Gradient_b26j0"]
-offsets = PackedFloat32Array(0.136364, 1)
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_n7ghd"]
-gradient = SubResource("Gradient_b26j0")
-fill = 1
-fill_from = Vector2(0.495413, 0.472477)
-
 [node name="main" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [-34.0]
 
@@ -200,23 +189,6 @@ limit_right = 0
 limit_bottom = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
-
-[node name="Sprite2D" type="Sprite2D" parent="player"]
-visible = false
-z_index = 20
-position = Vector2(-337, 11)
-scale = Vector2(0.823003, 0.823003)
-texture = ExtResource("7_b26j0")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="player/Sprite2D"]
-stream = ExtResource("8_n7ghd")
-volume_db = 24.0
-
-[node name="PointLight2D" type="PointLight2D" parent="player/Sprite2D"]
-visible = false
-position = Vector2(-1.70702, 1.81641)
-scale = Vector2(8.55802, 5.69371)
-texture = SubResource("GradientTexture2D_n7ghd")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="player"]
 
