@@ -193,6 +193,7 @@ position_smoothing_speed = 10.0
 [node name="CanvasLayer" type="CanvasLayer" parent="player"]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="player/CanvasLayer"]
+visible = false
 z_index = 3
 anchors_preset = -1
 anchor_left = -3.2

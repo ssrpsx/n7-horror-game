@@ -1,3 +1,6 @@
 res://front-elevator.tscn
 res://point_light_2d_2.gd
 res://cutscene-elevator.gd
+res://ui.tscn
+res://cutscene.tscn
+res://player.tscn

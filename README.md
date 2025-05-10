@@ -35,4 +35,4 @@ Coming soon to Android via Google Play!
 
 ---
 
-Feel free to fork, star, or give feedback. This is our very first game, and we're excited to keep learning and improving!
+<img src="readme-image/1.png" alt="Desktop Trips">
