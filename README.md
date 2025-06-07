@@ -29,10 +29,9 @@ Will Lucia escape? Or will she be caught in the darkness that stalks the univers
 
 ## 📷 Screenshots
 Waiting for development
+<img src="readme-image/1.png" alt="Desktop Trips">
 
 ## 📦 Build
 Coming soon to Android on Google PlayStore!
 
 ---
-
-<img src="readme-image/1.png" alt="Desktop Trips">
