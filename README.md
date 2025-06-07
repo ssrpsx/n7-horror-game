@@ -31,7 +31,7 @@ Will Lucia escape? Or will she be caught in the darkness that stalks the univers
 Waiting for development
 
 ## 📦 Build
-Coming soon to Android via Google Play!
+Coming soon to Android on Google PlayStore!
 
 ---
 
