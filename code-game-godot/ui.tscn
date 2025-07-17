@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://c1me3gwjrirhu"]
 
 [ext_resource type="Script" uid="uid://ddhygxko77s77" path="res://ui.gd" id="1_27fn8"]
-[ext_resource type="Texture2D" uid="uid://6n4okxgdf2if" path="res://background/N7/Untitled-1.png" id="2_27fn8"]
+[ext_resource type="Texture2D" uid="uid://k0cy5we3trtn" path="res://background/N7/Start_Menu.png" id="2_m6e0p"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6e0p"]
-texture = ExtResource("2_27fn8")
+texture = ExtResource("2_m6e0p")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_27fn8"]
 content_margin_left = 7.0
@@ -13,7 +13,7 @@ content_margin_right = 7.0
 content_margin_bottom = 10.0
 bg_color = Color(0.258824, 0.0117647, 0, 1)
 border_width_bottom = 2
-border_color = Color(0.763467, 0.26742, 0.0726277, 1)
+border_color = Color(0.461294, 0.135279, 0.073531, 1)
 corner_radius_top_left = 7
 corner_radius_top_right = 7
 corner_radius_bottom_right = 7
