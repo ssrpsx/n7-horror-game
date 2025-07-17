@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://cuqxucu8dk7up"]
+
+[ext_resource type="Texture2D" uid="uid://bmkj1khe0qsbb" path="res://background/Cutscene/elevator/0.png" id="1_bl24s"]
+[ext_resource type="Script" uid="uid://bfandia6wppuv" path="res://script/cutscene-elevator.gd" id="2_ix241"]
+[ext_resource type="AudioStream" uid="uid://b3nwxvenmp7kv" path="res://sound/elevator-up.mp3" id="3_8vcau"]
+[ext_resource type="AudioStream" uid="uid://3u2m5marir6n" path="res://sound/elevator-open.mp3" id="4_bl24s"]
+
+[sub_resource type="Gradient" id="Gradient_8vcau"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bl24s"]
+gradient = SubResource("Gradient_8vcau")
+fill = 1
+fill_from = Vector2(0.458716, 0.463303)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(213, 120)
+texture = ExtResource("1_bl24s")
+script = ExtResource("2_ix241")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Sprite2D"]
+z_index = 1
+position = Vector2(-213, -120)
+color = Color(0.0509804, 0.0509804, 0.0509804, 0.960784)
+
+[node name="PointLight2D" type="PointLight2D" parent="Sprite2D"]
+position = Vector2(3, 1.99999)
+scale = Vector2(2.31681, 1.28233)
+energy = 0.0
+texture = SubResource("GradientTexture2D_bl24s")
+texture_scale = 2.9
+
+[node name="up" type="AudioStreamPlayer2D" parent="Sprite2D"]
+position = Vector2(-213, -120)
+stream = ExtResource("3_8vcau")
+volume_db = -10.0
+
+[node name="open" type="AudioStreamPlayer2D" parent="Sprite2D"]
+stream = ExtResource("4_bl24s")

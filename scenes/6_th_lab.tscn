@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2rhouknqh6lk"]
+
+[ext_resource type="Script" uid="uid://dboe3k7cmp1go" path="res://script/6_th_lab.gd" id="1_nvin5"]
+[ext_resource type="Texture2D" uid="uid://dxpxbub0jn7" path="res://background/N7/Lab_6th.png" id="2_6avrs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_csch8"]
+size = Vector2(4201.12, 79.5301)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvhvq"]
+size = Vector2(9.1377, 1194.42)
+
+[node name="6_th_lab" type="Node2D"]
+script = ExtResource("1_nvin5")
+metadata/_edit_vertical_guides_ = [-420.0, 429.0]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5, 0)
+texture = ExtResource("2_6avrs")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Sprite2D"]
+z_index = 1
+color = Color(0.0509804, 0.0509804, 0.0509804, 0.960784)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+position = Vector2(-5, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(2.5, 107.926)
+scale = Vector2(0.203041, 0.203041)
+shape = SubResource("RectangleShape2D_csch8")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(421, -1)
+scale = Vector2(0.203041, 0.203041)
+shape = SubResource("RectangleShape2D_cvhvq")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(-410, -15)
+scale = Vector2(0.203041, 0.203041)
+shape = SubResource("RectangleShape2D_cvhvq")

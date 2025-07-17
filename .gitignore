@@ -1,0 +1,38 @@
+# ─────────────────────────────────────────────
+# Godot-specific folders and files
+.import/
+.export/
+*.godot/
+*.mono/
+
+# Exported builds
+*.exe
+*.apk
+*.aab
+*.zip
+*.pck
+*.xcodeproj
+
+# Backup and temporary files
+*.tmp
+*.log
+*.bak
+*.old
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# VSCode (optional editor config)
+.vscode/
+
+# Godot C# (Mono / .NET)
+*.csproj
+*.sln
+*.user
+bin/
+obj/
+
+# Godot Android build folder
+android/build/

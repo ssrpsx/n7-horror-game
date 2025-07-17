@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1yob6bcpdu1d"]
+
+[ext_resource type="Script" uid="uid://44ipymdbtw2j" path="res://script/apple_bedroom.gd" id="1_hh5rb"]
+[ext_resource type="Texture2D" uid="uid://byk0alo400i4e" path="res://background/Other/Apple_Room.png" id="1_lcb6b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hh5rb"]
+size = Vector2(2098.1, 69.6799)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f3ucf"]
+size = Vector2(9.1377, 1194.42)
+
+[node name="Apple_bedroom" type="Node2D"]
+script = ExtResource("1_hh5rb")
+metadata/_edit_vertical_guides_ = [-197.0, 201.0, -190.0]
+metadata/_edit_horizontal_guides_ = [-123.0]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5, 0)
+texture = ExtResource("1_lcb6b")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
+position = Vector2(-5, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(5, 112)
+scale = Vector2(0.203041, 0.203041)
+shape = SubResource("RectangleShape2D_hh5rb")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(216, -5.96046e-08)
+scale = Vector2(0.203041, 0.203041)
+shape = SubResource("RectangleShape2D_f3ucf")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(-207, 0.999999)
+scale = Vector2(0.203041, 0.203041)
+shape = SubResource("RectangleShape2D_f3ucf")
