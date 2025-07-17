@@ -20,7 +20,7 @@ config/icon="uid://cpvu6lomq25jr"
 window/size/viewport_width=426
 window/size/viewport_height=240
 window/size/mode=4
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 
 [gui]
 

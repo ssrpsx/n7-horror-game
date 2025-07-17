@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://c1me3gwjrirhu"]
+[gd_scene load_steps=8 format=3 uid="uid://c1me3gwjrirhu"]
 
 [ext_resource type="Script" uid="uid://ddhygxko77s77" path="res://ui.gd" id="1_27fn8"]
-[ext_resource type="Texture2D" uid="uid://k0cy5we3trtn" path="res://background/N7/Start_Menu.png" id="2_m6e0p"]
+[ext_resource type="Texture2D" uid="uid://b7ibhinyhmb4p" path="res://ui/Start_Menu.png" id="2_27fn8"]
+[ext_resource type="FontFile" uid="uid://5mlp1xf630m6" path="res://font/Super Vanilla.ttf" id="3_27fn8"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6e0p"]
-texture = ExtResource("2_m6e0p")
+texture = ExtResource("2_27fn8")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_27fn8"]
 content_margin_left = 7.0
@@ -33,7 +34,11 @@ corner_radius_top_right = 7
 corner_radius_bottom_right = 7
 corner_radius_bottom_left = 7
 
-[sub_resource type="FontVariation" id="FontVariation_m6e0p"]
+[sub_resource type="LabelSettings" id="LabelSettings_nltto"]
+line_spacing = 4.0
+font = ExtResource("3_27fn8")
+font_size = 30
+shadow_size = 13
 
 [node name="Main_menu" type="Control"]
 layout_mode = 3
@@ -69,6 +74,7 @@ alignment = 1
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_27fn8")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/hover = SubResource("StyleBoxFlat_27fn8")
 theme_override_styles/normal = SubResource("StyleBoxFlat_nltto")
@@ -76,6 +82,7 @@ text = "Play"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_27fn8")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/hover = SubResource("StyleBoxFlat_27fn8")
 theme_override_styles/normal = SubResource("StyleBoxFlat_nltto")
@@ -83,6 +90,7 @@ text = "Setting"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_27fn8")
 theme_override_font_sizes/font_size = 17
 theme_override_styles/hover = SubResource("StyleBoxFlat_27fn8")
 theme_override_styles/normal = SubResource("StyleBoxFlat_nltto")
@@ -90,18 +98,13 @@ text = "Exit
 "
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -112.0
-offset_top = 39.0
-offset_right = 113.0
-offset_bottom = 81.0
-grow_horizontal = 2
-theme_override_fonts/font = SubResource("FontVariation_m6e0p")
-theme_override_font_sizes/font_size = 25
+layout_mode = 0
+offset_left = 1.0
+offset_top = 36.0
+offset_right = 426.0
+offset_bottom = 74.0
 text = "N7 HORROR GAME"
+label_settings = SubResource("LabelSettings_nltto")
 horizontal_alignment = 1
 vertical_alignment = 1
 

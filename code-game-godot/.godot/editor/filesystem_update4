@@ -4,3 +4,13 @@ res://cutscene-elevator.gd
 res://ui.tscn
 res://cutscene.tscn
 res://player.tscn
+res://6_th_floor.tscn
+res://6_th_floor.gd
+res://7_th_floor.tscn
+res://7_th_floor.gd
+res://6_th_lab.gd
+res://6_th_lab.tscn
+res://7_th_lab.gd
+res://7_th_lab.tscn
+res://apple_bedroom.tscn
+res://apple_bedroom.gd

@@ -178,7 +178,7 @@ position = Vector2(-87, 27)
 scale = Vector2(1.06269, 1.06122)
 enabled = false
 color = Color(0.869693, 0.777154, 0.592907, 1)
-energy = 2.25
+energy = 1.25
 texture = ExtResource("6_b26j0")
 
 [node name="Camera2D" type="Camera2D" parent="player"]
