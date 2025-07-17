@@ -11,21 +11,18 @@ size = Vector2(9.1377, 1194.42)
 
 [node name="Apple_bedroom" type="Node2D"]
 script = ExtResource("1_hh5rb")
+metadata/_edit_vertical_guides_ = [-197.0, 201.0, -190.0]
+metadata/_edit_horizontal_guides_ = [-123.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(5, 0)
 texture = ExtResource("1_lcb6b")
 
-[node name="CanvasModulate" type="CanvasModulate" parent="Sprite2D"]
-visible = false
-z_index = 1
-color = Color(0.0509804, 0.0509804, 0.0509804, 0.960784)
-
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 position = Vector2(-5, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(5, 106)
+position = Vector2(5, 112)
 scale = Vector2(0.203041, 0.203041)
 shape = SubResource("RectangleShape2D_hh5rb")
 
