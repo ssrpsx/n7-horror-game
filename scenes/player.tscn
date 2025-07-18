@@ -174,7 +174,7 @@ texture_scale = 0.01
 
 [node name="PointLight2D" type="PointLight2D" parent="player"]
 z_index = 1
-position = Vector2(-87, 27)
+position = Vector2(-94, 57)
 scale = Vector2(1.06269, 1.06122)
 enabled = false
 color = Color(0.869693, 0.777154, 0.592907, 1)
