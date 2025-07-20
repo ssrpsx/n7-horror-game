@@ -74,7 +74,7 @@ func _process(_delta):
 	if Input.is_action_just_pressed("interact"):
 		if is_near_btn1:
 			Global.prev_scene_name = "7_th_floor"
-			get_tree().change_scene_to_file("res://scenes/7_th_front-elevator.tscn")
+			get_tree().change_scene_to_file("res://scenes/7_th_front_elevator.tscn")
 		elif is_near_btn2:
 			Global.prev_scene_name = "7_th_floor"
 			get_tree().change_scene_to_file("res://scenes/7_th_lab.tscn")

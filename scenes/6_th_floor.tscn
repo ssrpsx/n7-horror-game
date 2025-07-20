@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1dprm4yrj5k3"]
+[gd_scene load_steps=6 format=3 uid="uid://b1dprm4yrj5k3"]
 
 [ext_resource type="Texture2D" uid="uid://dijolmturn447" path="res://background/N7/6th_Floor.png" id="1_6a47w"]
 [ext_resource type="Script" uid="uid://cetgxv4gj10lw" path="res://script/6_th_floor.gd" id="1_vx8x8"]
+[ext_resource type="AudioStream" uid="uid://bl17882kv7bjh" path="res://sound/bg.mp3" id="3_14dxa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vx8x8"]
 size = Vector2(10933.8, 94.305)
@@ -18,7 +19,6 @@ position = Vector2(5, 0)
 texture = ExtResource("1_6a47w")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Sprite2D"]
-visible = false
 z_index = 1
 color = Color(0.0509804, 0.0509804, 0.0509804, 0.960784)
 
@@ -64,3 +64,9 @@ offset_top = -96.0
 offset_right = 538.0
 offset_bottom = -56.0
 text = "E"
+
+[node name="bg" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_14dxa")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true

@@ -1,8 +1,8 @@
 [gd_scene load_steps=14 format=3 uid="uid://y24hc8et3p6k"]
 
-[ext_resource type="Texture2D" uid="uid://dqf1ohpggm03q" path="res://background/N7/front-elevator.png" id="1_chg6u"]
 [ext_resource type="Script" uid="uid://b45w037aqw8f" path="res://scenes/7_th_front_elevator.gd" id="1_nej8r"]
 [ext_resource type="Script" uid="uid://dvjtmsb7f2jjw" path="res://script/point_light_2d.gd" id="2_nej8r"]
+[ext_resource type="Texture2D" uid="uid://cfr4ie3renpvp" path="res://background/N7/7_th_front-elevator.png" id="2_ngqgh"]
 [ext_resource type="AudioStream" uid="uid://bov8m7g5sun5x" path="res://sound/switch-light.mp3" id="3_ngqgh"]
 [ext_resource type="Script" uid="uid://c5t6orv6fk05s" path="res://script/point_light_2d_2.gd" id="4_lk6q0"]
 [ext_resource type="AudioStream" uid="uid://ce3p0vms1hhe" path="res://sound/emergency.mp3" id="5_upt8s"]
@@ -38,10 +38,9 @@ script = ExtResource("1_nej8r")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-5, 0)
-texture = ExtResource("1_chg6u")
+texture = ExtResource("2_ngqgh")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Sprite2D"]
-visible = false
 z_index = 1
 color = Color(0.0509804, 0.0509804, 0.0509804, 0.960784)
 
@@ -65,8 +64,8 @@ shape = SubResource("RectangleShape2D_sfnf4")
 [node name="PointLight2D" type="PointLight2D" parent="Sprite2D"]
 visible = false
 z_index = 1
-position = Vector2(-104, 94)
-scale = Vector2(2.1875, 4.66406)
+position = Vector2(68, 95)
+scale = Vector2(2.1875, 4.66015)
 energy = 4.0
 texture = SubResource("GradientTexture2D_0d1ea")
 script = ExtResource("2_nej8r")

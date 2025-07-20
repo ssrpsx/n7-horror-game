@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b07h7g3s5j6uk"]
+[gd_scene load_steps=6 format=3 uid="uid://b07h7g3s5j6uk"]
 
 [ext_resource type="Script" uid="uid://blpqiyrnh0qvs" path="res://script/7_th_floor.gd" id="1_en5ng"]
 [ext_resource type="Texture2D" uid="uid://cwktwv6ycqv62" path="res://background/N7/7th_Floor.png" id="1_llk7p"]
+[ext_resource type="AudioStream" uid="uid://bl17882kv7bjh" path="res://sound/bg.mp3" id="3_v01e8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_en5ng"]
 size = Vector2(12480.2, 94.305)
@@ -18,7 +19,6 @@ position = Vector2(5, 0)
 texture = ExtResource("1_llk7p")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Sprite2D"]
-visible = false
 z_index = 1
 color = Color(0.0509804, 0.0509804, 0.0509804, 0.960784)
 
@@ -53,7 +53,7 @@ position = Vector2(-1172, 96)
 
 [node name="btn1" type="Marker2D" parent="."]
 z_as_relative = false
-position = Vector2(1083, 9)
+position = Vector2(1060, 6)
 gizmo_extents = 91.1
 
 [node name="btn2" type="Marker2D" parent="."]
@@ -70,3 +70,9 @@ offset_top = -96.0
 offset_right = 538.0
 offset_bottom = -56.0
 text = "E"
+
+[node name="bg" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_v01e8")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true

@@ -1,10 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://f48kg2m2jay1"]
+[gd_scene load_steps=6 format=3 uid="uid://f48kg2m2jay1"]
 
 [ext_resource type="Texture2D" uid="uid://ccgqhmnt7xyui" path="res://background/N7/_N7-1floor_2.png" id="1_gqne8"]
 [ext_resource type="Script" uid="uid://ceaxuseva3w3o" path="res://scenes/1_st_floor_2.gd" id="1_iig33"]
+[ext_resource type="AudioStream" uid="uid://bl17882kv7bjh" path="res://sound/bg.mp3" id="3_he01u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8yym"]
-size = Vector2(2103.02, 61.9282)
+size = Vector2(2093.17, 67.9025)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_loguq"]
 size = Vector2(9.1377, 1194.42)
@@ -19,7 +20,6 @@ position = Vector2(5, 0)
 texture = ExtResource("1_gqne8")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Sprite2D"]
-visible = false
 z_index = 1
 color = Color(0.0509804, 0.0509804, 0.0509804, 0.960784)
 
@@ -27,7 +27,7 @@ color = Color(0.0509804, 0.0509804, 0.0509804, 0.960784)
 position = Vector2(-5, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(5.00001, 112.926)
+position = Vector2(5.50001, 112.926)
 scale = Vector2(0.203041, 0.203041)
 shape = SubResource("RectangleShape2D_n8yym")
 
@@ -64,3 +64,9 @@ offset_right = 538.0
 offset_bottom = -56.0
 text = "E"
 metadata/_edit_use_anchors_ = true
+
+[node name="bg" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_he01u")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
