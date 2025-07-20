@@ -36,5 +36,6 @@ func _ready():
 		digit -= 0.0625
 		color.energy = digit
 	timer.start(1)
-
-	get_tree().change_scene_to_file("res://front-elevator.tscn")
+	
+	Global.prev_scene_name = "cutscene_elevator"
+	get_tree().change_scene_to_file("res://scenes/front-elevator.tscn")

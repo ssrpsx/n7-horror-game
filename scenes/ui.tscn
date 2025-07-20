@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://c1me3gwjrirhu"]
+[gd_scene load_steps=9 format=3 uid="uid://c1me3gwjrirhu"]
 
 [ext_resource type="Script" uid="uid://ddhygxko77s77" path="res://script/ui.gd" id="1_27fn8"]
 [ext_resource type="Texture2D" uid="uid://b7ibhinyhmb4p" path="res://ui/Start_Menu.png" id="2_27fn8"]
 [ext_resource type="FontFile" uid="uid://5mlp1xf630m6" path="res://font/Super Vanilla.ttf" id="3_27fn8"]
+[ext_resource type="AudioStream" uid="uid://bl17882kv7bjh" path="res://sound/bg.mp3" id="4_gdt2y"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6e0p"]
 texture = ExtResource("2_27fn8")
@@ -108,6 +109,12 @@ GAME"
 label_settings = SubResource("LabelSettings_nltto")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="bg" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_gdt2y")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_setting_pressed"]
