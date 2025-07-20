@@ -39,3 +39,20 @@ shape = SubResource("RectangleShape2D_cvhvq")
 position = Vector2(-410, -15)
 scale = Vector2(0.203041, 0.203041)
 shape = SubResource("RectangleShape2D_cvhvq")
+
+[node name="SpawnFromMap1" type="Marker2D" parent="Sprite2D"]
+position = Vector2(-355, 94)
+gizmo_extents = 100.1
+
+[node name="btn1" type="Marker2D" parent="."]
+z_as_relative = false
+position = Vector2(-389, 7)
+gizmo_extents = 91.1
+
+[node name="E_Label" type="RichTextLabel" parent="."]
+offset_left = 498.0
+offset_top = -96.0
+offset_right = 538.0
+offset_bottom = -56.0
+text = "E"
+metadata/_edit_use_anchors_ = true

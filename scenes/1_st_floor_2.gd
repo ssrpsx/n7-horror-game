@@ -17,10 +17,9 @@ func _ready():
 	body = player_instance.get_node("player");
 	
 	match Global.prev_scene_name:
-		"6th-front-elevator":
-			body.get_node("AnimatedSprite2D").flip_h = true
+		"cutscene_elevator":
 			body.global_position = player_spawn_from_map1.global_position
-		"6_th_lab":
+		"1_st_floor1":
 			body.get_node("AnimatedSprite2D").flip_h = true
 			body.global_position = player_spawn_from_map2.global_position
 		_:
@@ -28,8 +27,8 @@ func _ready():
 	player_instance.z_index = 10
 
 	var camera = player_instance.get_node("player/Camera2D")
-	camera.limit_left = -1100
-	camera.limit_right = 1110
+	camera.limit_left = -200
+	camera.limit_right = 218
 	camera.limit_top = -120
 	camera.limit_bottom = 0
 	
@@ -64,8 +63,8 @@ func _process(_delta):
 	
 	if Input.is_action_just_pressed("interact"):
 		if is_near_btn1:
-			Global.prev_scene_name = "6_th_floor"
-			get_tree().change_scene_to_file("res://scenes/front-elevator.tscn")
+			Global.prev_scene_name = "1_st_floor2"
+			get_tree().change_scene_to_file("res://scenes/cutscene_elevator.tscn")
 		elif is_near_btn2:
-			Global.prev_scene_name = "6_th_floor"
-			get_tree().change_scene_to_file("res://scenes/6_th_lab.tscn")
+			Global.prev_scene_name = "1_st_floor2"
+			get_tree().change_scene_to_file("res://scenes/1_st_floor_1.tscn")

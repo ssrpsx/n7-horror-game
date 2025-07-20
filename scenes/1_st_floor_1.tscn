@@ -1,21 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://b07h7g3s5j6uk"]
+[gd_scene load_steps=5 format=3 uid="uid://bptroac3qompm"]
 
-[ext_resource type="Script" uid="uid://blpqiyrnh0qvs" path="res://script/7_th_floor.gd" id="1_en5ng"]
-[ext_resource type="Texture2D" uid="uid://cwktwv6ycqv62" path="res://background/N7/7th_Floor.png" id="1_llk7p"]
+[ext_resource type="Script" uid="uid://4ypxtlua06fa" path="res://scenes/1_st_floor_1.gd" id="1_bjndi"]
+[ext_resource type="Texture2D" uid="uid://dm8gmfg5dnuus" path="res://background/N7/N7-1floor.png" id="1_r7lkj"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_en5ng"]
-size = Vector2(12480.2, 94.305)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n8yym"]
+size = Vector2(2103.02, 61.9282)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ae6d8"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_loguq"]
 size = Vector2(9.1377, 1194.42)
 
-[node name="7th_floor" type="Node2D"]
-script = ExtResource("1_en5ng")
-metadata/_edit_vertical_guides_ = [-1264.0, 1274.0]
+[node name="1st_floor_1" type="Node2D"]
+script = ExtResource("1_bjndi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(5, 0)
-texture = ExtResource("1_llk7p")
+texture = ExtResource("1_r7lkj")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Sprite2D"]
 visible = false
@@ -26,43 +25,35 @@ color = Color(0.0509804, 0.0509804, 0.0509804, 0.960784)
 position = Vector2(-5, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(5.00005, 109.426)
+position = Vector2(3.49998, 109.713)
 scale = Vector2(0.203041, 0.203041)
-shape = SubResource("RectangleShape2D_en5ng")
+shape = SubResource("RectangleShape2D_n8yym")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(1272, -1)
+position = Vector2(217, -2)
 scale = Vector2(0.203041, 0.203041)
-shape = SubResource("RectangleShape2D_ae6d8")
+shape = SubResource("RectangleShape2D_loguq")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(-1235, -1)
+position = Vector2(-208, -3)
 scale = Vector2(0.203041, 0.203041)
-shape = SubResource("RectangleShape2D_ae6d8")
+shape = SubResource("RectangleShape2D_loguq")
 
 [node name="SpawnFromMap1" type="Marker2D" parent="Sprite2D"]
-position = Vector2(1092, 96)
+position = Vector2(-164, 100)
 gizmo_extents = 100.1
 
 [node name="SpawnFromMap2" type="Marker2D" parent="Sprite2D"]
-position = Vector2(-269, 95)
+position = Vector2(167, 100)
 gizmo_extents = 100.1
-
-[node name="SpawnFromMap3" type="Marker2D" parent="Sprite2D"]
-position = Vector2(-1172, 96)
 
 [node name="btn1" type="Marker2D" parent="."]
 z_as_relative = false
-position = Vector2(1083, 9)
+position = Vector2(-177, 20)
 gizmo_extents = 91.1
 
 [node name="btn2" type="Marker2D" parent="."]
-z_index = 12
-position = Vector2(-245, -3)
-gizmo_extents = 127.1
-
-[node name="btn3" type="Marker2D" parent="."]
-position = Vector2(-1231, 6)
+position = Vector2(200, 32)
 
 [node name="E_Label" type="RichTextLabel" parent="."]
 offset_left = 498.0
@@ -70,3 +61,4 @@ offset_top = -96.0
 offset_right = 538.0
 offset_bottom = -56.0
 text = "E"
+metadata/_edit_use_anchors_ = true

@@ -1,20 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://be73hkiqglsr3"]
+[gd_scene load_steps=5 format=3 uid="uid://ciw7tmuikv41a"]
 
-[ext_resource type="Script" uid="uid://dua6dg8imyoj1" path="res://script/7_th_lab.gd" id="1_4kjhw"]
-[ext_resource type="Texture2D" uid="uid://ca4sc4gc7m3oh" path="res://background/N7/Lab_7th.png" id="2_nmcnn"]
+[ext_resource type="Script" uid="uid://disgp8vawrv2n" path="res://scenes/common.gd" id="1_n8yym"]
+[ext_resource type="Texture2D" uid="uid://dshv44t3dutxw" path="res://background/N7/Common.png" id="1_vsrq4"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_c3fyk"]
-size = Vector2(4201.12, 79.5301)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n8yym"]
+size = Vector2(2103.02, 61.9282)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfmng"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_loguq"]
 size = Vector2(9.1377, 1194.42)
 
-[node name="7_th_lab" type="Node2D"]
-script = ExtResource("1_4kjhw")
+[node name="common" type="Node2D"]
+script = ExtResource("1_n8yym")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(5, 0)
-texture = ExtResource("2_nmcnn")
+texture = ExtResource("1_vsrq4")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Sprite2D"]
 visible = false
@@ -25,33 +25,33 @@ color = Color(0.0509804, 0.0509804, 0.0509804, 0.960784)
 position = Vector2(-5, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(5.5, 110.926)
+position = Vector2(5.50001, 114.5)
 scale = Vector2(0.203041, 0.203041)
-shape = SubResource("RectangleShape2D_c3fyk")
+shape = SubResource("RectangleShape2D_n8yym")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(430, -1)
+position = Vector2(429, 1)
 scale = Vector2(0.203041, 0.203041)
-shape = SubResource("RectangleShape2D_lfmng")
+shape = SubResource("RectangleShape2D_loguq")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(-421, -1)
+position = Vector2(-420, 0)
 scale = Vector2(0.203041, 0.203041)
-shape = SubResource("RectangleShape2D_lfmng")
+shape = SubResource("RectangleShape2D_loguq")
 
 [node name="SpawnFromMap1" type="Marker2D" parent="Sprite2D"]
-position = Vector2(-360, 95)
+position = Vector2(372, 107)
 gizmo_extents = 100.1
 
 [node name="btn1" type="Marker2D" parent="."]
 z_as_relative = false
-position = Vector2(-377.9, 5)
+position = Vector2(410, 33)
 gizmo_extents = 91.1
 
 [node name="E_Label" type="RichTextLabel" parent="."]
-offset_left = 498.1
-offset_top = -110.0
-offset_right = 538.1
-offset_bottom = -70.0
+offset_left = 498.0
+offset_top = -96.0
+offset_right = 538.0
+offset_bottom = -56.0
 text = "E"
 metadata/_edit_use_anchors_ = true
