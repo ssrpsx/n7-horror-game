@@ -2,7 +2,7 @@ extends TextureRect
 
 var frame = 1
 var max_frame = 5
-var frame_delay = 0.75
+var frame_delay = 0.8
 
 func _ready():
 	loop_animation()
