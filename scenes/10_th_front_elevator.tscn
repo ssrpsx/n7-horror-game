@@ -1,12 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://y24hc8et3p6k"]
+[gd_scene load_steps=14 format=3 uid="uid://06g17auavead"]
 
-[ext_resource type="Script" uid="uid://b45w037aqw8f" path="res://scenes/7_th_front_elevator.gd" id="1_nej8r"]
-[ext_resource type="Script" uid="uid://dvjtmsb7f2jjw" path="res://script/point_light_2d.gd" id="2_nej8r"]
-[ext_resource type="Texture2D" uid="uid://cfr4ie3renpvp" path="res://background/N7/7_th_front-elevator.png" id="2_ngqgh"]
-[ext_resource type="AudioStream" uid="uid://bov8m7g5sun5x" path="res://sound/switch-light.mp3" id="3_ngqgh"]
-[ext_resource type="Script" uid="uid://c5t6orv6fk05s" path="res://script/point_light_2d_2.gd" id="4_lk6q0"]
-[ext_resource type="AudioStream" uid="uid://ce3p0vms1hhe" path="res://sound/emergency.mp3" id="5_upt8s"]
-[ext_resource type="AudioStream" uid="uid://bl17882kv7bjh" path="res://sound/bg.mp3" id="6_8sd7b"]
+[ext_resource type="Script" uid="uid://b45w037aqw8f" path="res://scenes/7_th_front_elevator.gd" id="1_7uuou"]
+[ext_resource type="Texture2D" uid="uid://cfr4ie3renpvp" path="res://background/N7/7_th_front-elevator.png" id="2_odqrj"]
+[ext_resource type="Script" uid="uid://dvjtmsb7f2jjw" path="res://script/point_light_2d.gd" id="3_tlhti"]
+[ext_resource type="AudioStream" uid="uid://bov8m7g5sun5x" path="res://sound/switch-light.mp3" id="4_1o6ga"]
+[ext_resource type="Script" uid="uid://c5t6orv6fk05s" path="res://script/point_light_2d_2.gd" id="5_jodt7"]
+[ext_resource type="AudioStream" uid="uid://ce3p0vms1hhe" path="res://sound/emergency.mp3" id="6_75hse"]
+[ext_resource type="AudioStream" uid="uid://bl17882kv7bjh" path="res://sound/bg.mp3" id="7_dkovk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m68p8"]
 size = Vector2(4203.24, 79.5296)
@@ -33,12 +33,12 @@ fill = 1
 fill_from = Vector2(0.504587, 0.477064)
 fill_to = Vector2(0.798165, 0.123853)
 
-[node name="7th-front-elevator" type="Node2D"]
-script = ExtResource("1_nej8r")
+[node name="10th-front-elevator" type="Node2D"]
+script = ExtResource("1_7uuou")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-5, 0)
-texture = ExtResource("2_ngqgh")
+texture = ExtResource("2_odqrj")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Sprite2D"]
 visible = false
@@ -69,12 +69,12 @@ position = Vector2(68, 95)
 scale = Vector2(2.1875, 4.66015)
 energy = 4.0
 texture = SubResource("GradientTexture2D_0d1ea")
-script = ExtResource("2_nej8r")
+script = ExtResource("3_tlhti")
 
 [node name="light" type="AudioStreamPlayer2D" parent="Sprite2D/PointLight2D"]
 position = Vector2(-28.8, -19.7789)
 scale = Vector2(0.457143, 0.214405)
-stream = ExtResource("3_ngqgh")
+stream = ExtResource("4_1o6ga")
 volume_db = -5.0
 
 [node name="PointLight2D2" type="PointLight2D" parent="Sprite2D"]
@@ -84,10 +84,10 @@ position = Vector2(318, -60)
 scale = Vector2(1.73438, 1.73438)
 energy = 2.5
 texture = SubResource("GradientTexture2D_a03po")
-script = ExtResource("4_lk6q0")
+script = ExtResource("5_jodt7")
 
 [node name="emergency" type="AudioStreamPlayer2D" parent="Sprite2D/PointLight2D2"]
-stream = ExtResource("5_upt8s")
+stream = ExtResource("6_75hse")
 
 [node name="SpawnFromMap1" type="Marker2D" parent="Sprite2D"]
 position = Vector2(-281.9, 101.1)
@@ -98,7 +98,7 @@ position = Vector2(388.1, 101.1)
 gizmo_extents = 100.1
 
 [node name="bg" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("6_8sd7b")
+stream = ExtResource("7_dkovk")
 volume_db = -10.0
 autoplay = true
 parameters/looping = true
@@ -117,3 +117,4 @@ gizmo_extents = 127.1
 offset_right = 40.0
 offset_bottom = 40.0
 text = "E"
+metadata/_edit_use_anchors_ = true
