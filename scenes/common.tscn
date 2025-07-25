@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://bl17882kv7bjh" path="res://sound/bg.mp3" id="3_loguq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8yym"]
-size = Vector2(2093.17, 67.9025)
+size = Vector2(4201.12, 53.1247)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_loguq"]
 size = Vector2(9.1377, 1194.42)
@@ -26,7 +26,7 @@ color = Color(0.0509804, 0.0509804, 0.0509804, 0.960784)
 position = Vector2(-5, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(5.50001, 115.107)
+position = Vector2(5.49999, 113.607)
 scale = Vector2(0.203041, 0.203041)
 shape = SubResource("RectangleShape2D_n8yym")
 

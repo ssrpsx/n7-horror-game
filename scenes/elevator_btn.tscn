@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://d2l6tx14lpiyy"]
 
-[ext_resource type="Script" uid="uid://ddhygxko77s77" path="res://script/ui.gd" id="1_05yfe"]
+[ext_resource type="Script" uid="uid://cmgaci1l0af5e" path="res://scenes/elevator_btn.gd" id="1_05yfe"]
 [ext_resource type="Texture2D" uid="uid://b1tsoce22nge6" path="res://ui/elevator.png" id="2_05yfe"]
 [ext_resource type="FontFile" uid="uid://5mlp1xf630m6" path="res://font/Super Vanilla.ttf" id="3_rchg0"]
 [ext_resource type="AudioStream" uid="uid://bl17882kv7bjh" path="res://sound/bg.mp3" id="4_f1gdq"]
@@ -124,7 +124,7 @@ volume_db = -10.0
 autoplay = true
 parameters/looping = true
 
-[connection signal="pressed" from="Button" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_exit_pressed"]
-[connection signal="pressed" from="Button3" to="." method="_on_exit_pressed"]
-[connection signal="pressed" from="Button4" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed_1"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_pressed_2"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_pressed_3"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_pressed_4"]
