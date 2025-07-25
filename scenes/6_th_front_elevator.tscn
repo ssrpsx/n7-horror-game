@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://c8h0k01qkv5w8"]
 
 [ext_resource type="Script" uid="uid://dt50movj4dji1" path="res://scenes/6_th_front_elevator.gd" id="1_5nfpp"]
-[ext_resource type="Texture2D" uid="uid://cfr4ie3renpvp" path="res://background/N7/7_th_front-elevator.png" id="1_m286n"]
+[ext_resource type="Texture2D" uid="uid://dqf1ohpggm03q" path="res://background/N7/front-elevator.png" id="2_xjvdb"]
 [ext_resource type="Script" uid="uid://dvjtmsb7f2jjw" path="res://script/point_light_2d.gd" id="3_m5p44"]
 [ext_resource type="AudioStream" uid="uid://bov8m7g5sun5x" path="res://sound/switch-light.mp3" id="4_u6cei"]
 [ext_resource type="Script" uid="uid://c5t6orv6fk05s" path="res://script/point_light_2d_2.gd" id="5_lur8q"]
@@ -38,7 +38,7 @@ script = ExtResource("1_5nfpp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-5, 0)
-texture = ExtResource("1_m286n")
+texture = ExtResource("2_xjvdb")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Sprite2D"]
 visible = false

@@ -1,0 +1,130 @@
+[gd_scene load_steps=9 format=3 uid="uid://d2l6tx14lpiyy"]
+
+[ext_resource type="Script" uid="uid://ddhygxko77s77" path="res://script/ui.gd" id="1_05yfe"]
+[ext_resource type="Texture2D" uid="uid://b1tsoce22nge6" path="res://ui/elevator.png" id="2_05yfe"]
+[ext_resource type="FontFile" uid="uid://5mlp1xf630m6" path="res://font/Super Vanilla.ttf" id="3_rchg0"]
+[ext_resource type="AudioStream" uid="uid://bl17882kv7bjh" path="res://sound/bg.mp3" id="4_f1gdq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6e0p"]
+texture = ExtResource("2_05yfe")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_27fn8"]
+content_margin_left = 7.0
+content_margin_top = 4.0
+content_margin_right = 7.0
+content_margin_bottom = 10.0
+bg_color = Color(0.103744, 0.103744, 0.103744, 1)
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nltto"]
+content_margin_left = 5.0
+content_margin_top = 5.0
+content_margin_right = 5.0
+content_margin_bottom = 5.0
+bg_color = Color(0.219608, 0.219608, 0.219608, 1)
+border_width_bottom = 2
+border_color = Color(0.106373, 0.0642253, 0.00464729, 1)
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+shadow_size = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_nltto"]
+line_spacing = 4.0
+font = ExtResource("3_rchg0")
+font_size = 26
+shadow_size = 13
+
+[node name="Main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_05yfe")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 427.0
+offset_bottom = 241.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_m6e0p")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+offset_left = 27.0
+offset_top = 125.0
+offset_right = 107.0
+offset_bottom = 157.0
+theme_override_fonts/font = ExtResource("3_rchg0")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/hover = SubResource("StyleBoxFlat_27fn8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nltto")
+text = "1"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 2
+offset_left = 28.0
+offset_top = 170.0
+offset_right = 108.0
+offset_bottom = 202.0
+theme_override_fonts/font = ExtResource("3_rchg0")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/hover = SubResource("StyleBoxFlat_27fn8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nltto")
+text = "7"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 2
+offset_left = 132.0
+offset_top = 126.0
+offset_right = 212.0
+offset_bottom = 158.0
+theme_override_fonts/font = ExtResource("3_rchg0")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/hover = SubResource("StyleBoxFlat_27fn8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nltto")
+text = "6
+"
+
+[node name="Button4" type="Button" parent="."]
+layout_mode = 2
+offset_left = 132.0
+offset_top = 170.0
+offset_right = 212.0
+offset_bottom = 202.0
+theme_override_fonts/font = ExtResource("3_rchg0")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/hover = SubResource("StyleBoxFlat_27fn8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_nltto")
+text = "10"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 23.0
+offset_right = 243.0
+offset_bottom = 103.0
+text = "select the floor
+you wish to go"
+label_settings = SubResource("LabelSettings_nltto")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="bg" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_f1gdq")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="Button" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_exit_pressed"]

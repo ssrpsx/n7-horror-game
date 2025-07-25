@@ -40,7 +40,7 @@ corner_radius_bottom_left = 7
 [sub_resource type="LabelSettings" id="LabelSettings_nltto"]
 line_spacing = 4.0
 font = ExtResource("3_27fn8")
-font_size = 30
+font_size = 26
 shadow_size = 13
 
 [node name="Main_menu" type="Control"]
