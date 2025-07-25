@@ -117,3 +117,4 @@ gizmo_extents = 127.1
 offset_right = 40.0
 offset_bottom = 40.0
 text = "E"
+metadata/_edit_use_anchors_ = true

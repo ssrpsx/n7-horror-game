@@ -1,46 +1,44 @@
 [gd_scene load_steps=14 format=3 uid="uid://c8h0k01qkv5w8"]
 
-[ext_resource type="Script" uid="uid://caokkmxfh3eiw" path="res://script/front-elevator.gd" id="1_5nfpp"]
-[ext_resource type="Texture2D" uid="uid://dqf1ohpggm03q" path="res://background/N7/front-elevator.png" id="2_xjvdb"]
+[ext_resource type="Script" uid="uid://dt50movj4dji1" path="res://scenes/6_th_front_elevator.gd" id="1_5nfpp"]
+[ext_resource type="Texture2D" uid="uid://cfr4ie3renpvp" path="res://background/N7/7_th_front-elevator.png" id="1_m286n"]
 [ext_resource type="Script" uid="uid://dvjtmsb7f2jjw" path="res://script/point_light_2d.gd" id="3_m5p44"]
 [ext_resource type="AudioStream" uid="uid://bov8m7g5sun5x" path="res://sound/switch-light.mp3" id="4_u6cei"]
 [ext_resource type="Script" uid="uid://c5t6orv6fk05s" path="res://script/point_light_2d_2.gd" id="5_lur8q"]
 [ext_resource type="AudioStream" uid="uid://ce3p0vms1hhe" path="res://sound/emergency.mp3" id="6_oyx11"]
 [ext_resource type="AudioStream" uid="uid://bl17882kv7bjh" path="res://sound/bg.mp3" id="7_08tmh"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jktm"]
-size = Vector2(9.1377, 1194.42)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8poil"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5nfpp"]
 size = Vector2(4203.24, 79.5296)
 
-[sub_resource type="Gradient" id="Gradient_8poil"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xjvdb"]
+size = Vector2(9.1377, 1194.42)
+
+[sub_resource type="Gradient" id="Gradient_eow3j"]
 offsets = PackedFloat32Array(0.0714286, 1)
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_j5wjh"]
-gradient = SubResource("Gradient_8poil")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_m5p44"]
+gradient = SubResource("Gradient_eow3j")
 fill = 1
 fill_from = Vector2(0.513761, 0)
 fill_to = Vector2(0.724771, 0.444954)
 
-[sub_resource type="Gradient" id="Gradient_q2iqx"]
+[sub_resource type="Gradient" id="Gradient_gofhh"]
 colors = PackedColorArray(0.995771, 0.0990882, 0.155467, 1, 0, 0, 0, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_p3sn4"]
-gradient = SubResource("Gradient_q2iqx")
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_u6cei"]
+gradient = SubResource("Gradient_gofhh")
 fill = 1
 fill_from = Vector2(0.504587, 0.477064)
 fill_to = Vector2(0.798165, 0.123853)
 
-[node name="6th_front-elevator" type="Node2D"]
+[node name="6th-front-elevator" type="Node2D"]
 script = ExtResource("1_5nfpp")
-metadata/_edit_vertical_guides_ = [-287.0, -112.0]
-metadata/_edit_horizontal_guides_ = [1.0, -110.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-5, 0)
-texture = ExtResource("2_xjvdb")
+texture = ExtResource("1_m286n")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Sprite2D"]
 visible = false
@@ -49,28 +47,28 @@ color = Color(0.0509804, 0.0509804, 0.0509804, 0.960784)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D"]
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(0, 112.074)
+scale = Vector2(0.203041, 0.203041)
+shape = SubResource("RectangleShape2D_5nfpp")
+
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
 position = Vector2(422.499, -0.256256)
 scale = Vector2(0.203041, 0.203041)
-shape = SubResource("RectangleShape2D_7jktm")
+shape = SubResource("RectangleShape2D_xjvdb")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
 position = Vector2(-426, 5.96046e-08)
 scale = Vector2(0.203041, 0.203041)
-shape = SubResource("RectangleShape2D_7jktm")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(0, 112.074)
-scale = Vector2(0.203041, 0.203041)
-shape = SubResource("RectangleShape2D_8poil")
+shape = SubResource("RectangleShape2D_xjvdb")
 
 [node name="PointLight2D" type="PointLight2D" parent="Sprite2D"]
 visible = false
 z_index = 1
-position = Vector2(-104, 94)
-scale = Vector2(2.1875, 4.66406)
+position = Vector2(68, 95)
+scale = Vector2(2.1875, 4.66015)
 energy = 4.0
-texture = SubResource("GradientTexture2D_j5wjh")
+texture = SubResource("GradientTexture2D_m5p44")
 script = ExtResource("3_m5p44")
 
 [node name="light" type="AudioStreamPlayer2D" parent="Sprite2D/PointLight2D"]
@@ -85,7 +83,7 @@ z_index = 2
 position = Vector2(318, -60)
 scale = Vector2(1.73438, 1.73438)
 energy = 2.5
-texture = SubResource("GradientTexture2D_p3sn4")
+texture = SubResource("GradientTexture2D_u6cei")
 script = ExtResource("5_lur8q")
 
 [node name="emergency" type="AudioStreamPlayer2D" parent="Sprite2D/PointLight2D2"]
@@ -98,9 +96,6 @@ gizmo_extents = 100.1
 [node name="SpawnFromMap2" type="Marker2D" parent="Sprite2D"]
 position = Vector2(388.1, 101.1)
 gizmo_extents = 100.1
-
-[node name="SpawnFromMap3" type="Marker2D" parent="Sprite2D"]
-position = Vector2(246, 102)
 
 [node name="bg" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_08tmh")
@@ -118,10 +113,8 @@ z_index = 12
 position = Vector2(403, 31)
 gizmo_extents = 127.1
 
-[node name="btn3" type="Marker2D" parent="."]
-position = Vector2(244, 14)
-
 [node name="E_Label" type="RichTextLabel" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
 text = "E"
+metadata/_edit_use_anchors_ = true
