@@ -110,7 +110,7 @@ gizmo_extents = 91.1
 
 [node name="btn2" type="Marker2D" parent="."]
 z_index = 12
-position = Vector2(403, 31)
+position = Vector2(401, 7)
 gizmo_extents = 127.1
 
 [node name="E_Label" type="RichTextLabel" parent="."]

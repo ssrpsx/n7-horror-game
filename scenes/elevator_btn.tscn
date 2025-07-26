@@ -57,7 +57,7 @@ offset_right = 427.0
 offset_bottom = 241.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_m6e0p")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button1" type="Button" parent="."]
 layout_mode = 2
 offset_left = 27.0
 offset_top = 125.0
@@ -124,7 +124,7 @@ volume_db = -10.0
 autoplay = true
 parameters/looping = true
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed_1"]
+[connection signal="pressed" from="Button1" to="." method="_on_button_pressed_1"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_pressed_2"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_pressed_3"]
 [connection signal="pressed" from="Button4" to="." method="_on_button_pressed_4"]

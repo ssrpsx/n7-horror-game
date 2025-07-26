@@ -1,21 +1,22 @@
 [gd_scene load_steps=6 format=3 uid="uid://c2po8wy01f8hj"]
 
-[ext_resource type="Script" uid="uid://ckfqmvx6sn3d3" path="res://rooftop_1.gd" id="1_buhrp"]
-[ext_resource type="Texture2D" uid="uid://do3p1kbcqws2j" path="res://background/N7/Rooftop_1.png" id="2_pndtl"]
-[ext_resource type="AudioStream" uid="uid://bl17882kv7bjh" path="res://sound/bg.mp3" id="3_ogn05"]
+[ext_resource type="Texture2D" uid="uid://do3p1kbcqws2j" path="res://background/N7/Rooftop_1.png" id="1_7qm4j"]
+[ext_resource type="Script" uid="uid://dilmalg0nmfru" path="res://scenes/rooftop_1.gd" id="1_buhrp"]
+[ext_resource type="AudioStream" uid="uid://bl17882kv7bjh" path="res://sound/bg.mp3" id="2_buhrp"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5t1fq"]
-size = Vector2(3624.88, 79.5301)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pndtl"]
+size = Vector2(3624.88, 67.9025)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3a2d2"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ogn05"]
 size = Vector2(9.1377, 1194.42)
 
-[node name="rooftop_1" type="Node2D"]
+[node name="Rooftop_1" type="Node2D"]
 script = ExtResource("1_buhrp")
+metadata/_edit_vertical_guides_ = [372.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(5, 0)
-texture = ExtResource("2_pndtl")
+texture = ExtResource("1_7qm4j")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Sprite2D"]
 visible = false
@@ -26,46 +27,46 @@ color = Color(0.0509804, 0.0509804, 0.0509804, 0.960784)
 position = Vector2(-5, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(4.99999, 110.926)
+position = Vector2(5, 112.926)
 scale = Vector2(0.203041, 0.203041)
-shape = SubResource("RectangleShape2D_5t1fq")
+shape = SubResource("RectangleShape2D_pndtl")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(368, 1)
+position = Vector2(369, -4)
 scale = Vector2(0.203041, 0.203041)
-shape = SubResource("RectangleShape2D_3a2d2")
+shape = SubResource("RectangleShape2D_ogn05")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(-344, -2)
+position = Vector2(-336, -3)
 scale = Vector2(0.203041, 0.203041)
-shape = SubResource("RectangleShape2D_3a2d2")
+shape = SubResource("RectangleShape2D_ogn05")
 
 [node name="SpawnFromMap1" type="Marker2D" parent="Sprite2D"]
-position = Vector2(-360, 95)
+position = Vector2(-285, 103)
 gizmo_extents = 100.1
 
 [node name="SpawnFromMap2" type="Marker2D" parent="Sprite2D"]
-position = Vector2(150, 100)
+position = Vector2(131.1, 103.1)
 gizmo_extents = 100.1
 
 [node name="btn1" type="Marker2D" parent="."]
 z_as_relative = false
-position = Vector2(-320, 5)
+position = Vector2(-311, 3)
 gizmo_extents = 91.1
 
 [node name="btn2" type="Marker2D" parent="."]
-position = Vector2(169, 10)
+position = Vector2(148, 2)
 
 [node name="E_Label" type="RichTextLabel" parent="."]
-offset_left = 498.1
-offset_top = -110.0
-offset_right = 538.1
-offset_bottom = -70.0
+offset_left = 498.0
+offset_top = -96.0
+offset_right = 538.0
+offset_bottom = -56.0
 text = "E"
 metadata/_edit_use_anchors_ = true
 
 [node name="bg" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_ogn05")
+stream = ExtResource("2_buhrp")
 volume_db = -10.0
 autoplay = true
 parameters/looping = true

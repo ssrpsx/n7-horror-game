@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cuqxucu8dk7up"]
 
-[ext_resource type="Texture2D" uid="uid://bmkj1khe0qsbb" path="res://background/Cutscene/elevator/0.png" id="1_bl24s"]
+[ext_resource type="Texture2D" uid="uid://s2tnrvobeka3" path="res://background/Cutscene/elevator/0.png" id="1_bl24s"]
 [ext_resource type="Script" uid="uid://bfandia6wppuv" path="res://script/cutscene-elevator.gd" id="2_ix241"]
 [ext_resource type="AudioStream" uid="uid://b3nwxvenmp7kv" path="res://sound/elevator-up.mp3" id="3_8vcau"]
 [ext_resource type="AudioStream" uid="uid://3u2m5marir6n" path="res://sound/elevator-open.mp3" id="4_bl24s"]

@@ -65,7 +65,7 @@ shape = SubResource("RectangleShape2D_sfnf4")
 [node name="PointLight2D" type="PointLight2D" parent="Sprite2D"]
 visible = false
 z_index = 1
-position = Vector2(68, 95)
+position = Vector2(-105, 93)
 scale = Vector2(2.1875, 4.66015)
 energy = 4.0
 texture = SubResource("GradientTexture2D_0d1ea")
@@ -110,7 +110,7 @@ gizmo_extents = 91.1
 
 [node name="btn2" type="Marker2D" parent="."]
 z_index = 12
-position = Vector2(403, 31)
+position = Vector2(396, 7)
 gizmo_extents = 127.1
 
 [node name="E_Label" type="RichTextLabel" parent="."]

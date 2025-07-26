@@ -56,7 +56,7 @@ position = Vector2(-167, 15)
 gizmo_extents = 91.1
 
 [node name="btn2" type="Marker2D" parent="."]
-position = Vector2(200, 26)
+position = Vector2(192, 13)
 
 [node name="E_Label" type="RichTextLabel" parent="."]
 offset_left = 498.0

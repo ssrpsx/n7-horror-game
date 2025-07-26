@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crcrh1kmkcd3j"
-path="res://.godot/imported/3rd.png-8264a8653e9eef2b3cedf49467d7de55.ctex"
+uid="uid://dwnkbvtktes7q"
+path="res://.godot/imported/3.png-67442016f0d34b8c9777501ab8d981a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://background/Cutscene/elevator/3rd.png"
-dest_files=["res://.godot/imported/3rd.png-8264a8653e9eef2b3cedf49467d7de55.ctex"]
+source_file="res://background/Cutscene/elevator/down/3.png"
+dest_files=["res://.godot/imported/3.png-67442016f0d34b8c9777501ab8d981a9.ctex"]
 
 [params]
 
