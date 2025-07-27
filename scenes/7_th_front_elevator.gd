@@ -11,6 +11,10 @@ var body
 @onready var btn2 = $btn2
 var show_interact_ui = false
 
+var show_interact_ui_f = false
+@onready var f_label = $F_Label
+@onready var key = $Sprite2D/Sprite2D2
+
 func _ready():
 	player_instance = player_scene.instantiate()
 	add_child(player_instance)
@@ -36,6 +40,12 @@ func _ready():
 	camera.limit_bottom = 0
 	
 	e_label.visible = false
+	
+	if Global.key6:
+		key.visible = false
+		f_label.visible = false
+	else:
+		key.visible = true
 
 func _process(_delta):
 	if not player_instance:
@@ -44,9 +54,11 @@ func _process(_delta):
 	var body_pos = body.global_position
 	var distance_btn1 = abs(body_pos.x - btn1.global_position.x)
 	var distance_btn2 = abs(body_pos.x - btn2.global_position.x)
+	var distance_btnkey = abs(body_pos.x - $key.global_position.x)
 
 	var is_near_btn1 = distance_btn1 <= 80
 	var is_near_btn2 = distance_btn2 <= 80
+	var is_near_btnkey = distance_btnkey <= 50
 	
 	if is_near_btn1:
 		e_label.global_position = btn1.global_position
@@ -64,6 +76,21 @@ func _process(_delta):
 			e_label.visible = false
 			show_interact_ui = false
 	
+	if is_near_btnkey:
+		f_label.global_position = $key.global_position
+		
+	var should_show_f = is_near_btnkey
+	
+	if not Global.key6:
+		if should_show_f:
+			if not show_interact_ui_f:
+				f_label.visible = true
+				show_interact_ui_f = true
+		else:
+			if show_interact_ui_f:
+				f_label.visible = false
+				show_interact_ui_f = false
+	
 	if Input.is_action_just_pressed("interact"):
 		if is_near_btn1:
 			Global.prev_scene_name = "7th-front-elevator"
@@ -71,3 +98,10 @@ func _process(_delta):
 		elif is_near_btn2:
 			Global.prev_scene_name = "7th-front-elevator"
 			get_tree().change_scene_to_file("res://scenes/7_th_floor.tscn")
+			
+	if Input.is_action_just_pressed("interact_f"):
+		if key.visible == true:
+			Global.score += 1
+		key.visible = false
+		f_label.visible = false
+		Global.key6 = true

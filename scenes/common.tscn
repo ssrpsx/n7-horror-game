@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://ciw7tmuikv41a"]
+[gd_scene load_steps=7 format=3 uid="uid://ciw7tmuikv41a"]
 
 [ext_resource type="Script" uid="uid://disgp8vawrv2n" path="res://scenes/common.gd" id="1_n8yym"]
 [ext_resource type="Texture2D" uid="uid://dshv44t3dutxw" path="res://background/N7/Common.png" id="1_vsrq4"]
 [ext_resource type="AudioStream" uid="uid://bl17882kv7bjh" path="res://sound/bg.mp3" id="3_loguq"]
+[ext_resource type="Texture2D" uid="uid://cvet3qwd4qcdm" path="res://background/Other/key.png" id="3_y2low"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8yym"]
 size = Vector2(4201.12, 53.1247)
@@ -44,10 +45,18 @@ shape = SubResource("RectangleShape2D_loguq")
 position = Vector2(372, 107)
 gizmo_extents = 100.1
 
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(2, 29)
+scale = Vector2(0.460382, 0.460382)
+texture = ExtResource("3_y2low")
+
 [node name="btn1" type="Marker2D" parent="."]
 z_as_relative = false
 position = Vector2(410, 33)
 gizmo_extents = 91.1
+
+[node name="key" type="Marker2D" parent="."]
+position = Vector2(9, 26)
 
 [node name="E_Label" type="RichTextLabel" parent="."]
 offset_left = 498.0
@@ -56,6 +65,13 @@ offset_right = 538.0
 offset_bottom = -56.0
 text = "E"
 metadata/_edit_use_anchors_ = true
+
+[node name="F_Label" type="RichTextLabel" parent="."]
+offset_left = 481.0
+offset_top = 211.0
+offset_right = 521.0
+offset_bottom = 251.0
+text = "F"
 
 [node name="bg" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_loguq")

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://xkvh2ptbh1mq"]
+[gd_scene load_steps=7 format=3 uid="uid://xkvh2ptbh1mq"]
 
 [ext_resource type="Script" uid="uid://dos6skm0l0hn1" path="res://scenes/rooftop_2.gd" id="1_sjoax"]
 [ext_resource type="Texture2D" uid="uid://cdm2h84qoxweb" path="res://background/N7/Rooftop_2.png" id="1_wj0v6"]
 [ext_resource type="AudioStream" uid="uid://bl17882kv7bjh" path="res://sound/bg.mp3" id="2_sjoax"]
+[ext_resource type="Texture2D" uid="uid://bubqk12ba38fc" path="res://sprite/34_hextor.png" id="3_dr63j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dr63j"]
 size = Vector2(4191.27, 67.9025)
@@ -37,7 +38,7 @@ scale = Vector2(0.203041, 0.203041)
 shape = SubResource("RectangleShape2D_4hvyl")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(-412, -3)
+position = Vector2(-376, -7)
 scale = Vector2(0.203041, 0.203041)
 shape = SubResource("RectangleShape2D_4hvyl")
 
@@ -45,9 +46,13 @@ shape = SubResource("RectangleShape2D_4hvyl")
 position = Vector2(364, 104)
 gizmo_extents = 100.1
 
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(-393, 46)
+texture = ExtResource("3_dr63j")
+
 [node name="btn1" type="Marker2D" parent="."]
 z_as_relative = false
-position = Vector2(-400, 4)
+position = Vector2(-374, 7)
 gizmo_extents = 91.1
 
 [node name="btn2" type="Marker2D" parent="."]

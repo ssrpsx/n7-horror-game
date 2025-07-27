@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://y24hc8et3p6k"]
+[gd_scene load_steps=15 format=3 uid="uid://y24hc8et3p6k"]
 
 [ext_resource type="Script" uid="uid://b45w037aqw8f" path="res://scenes/7_th_front_elevator.gd" id="1_nej8r"]
 [ext_resource type="Script" uid="uid://dvjtmsb7f2jjw" path="res://script/point_light_2d.gd" id="2_nej8r"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://c5t6orv6fk05s" path="res://script/point_light_2d_2.gd" id="4_lk6q0"]
 [ext_resource type="AudioStream" uid="uid://ce3p0vms1hhe" path="res://sound/emergency.mp3" id="5_upt8s"]
 [ext_resource type="AudioStream" uid="uid://bl17882kv7bjh" path="res://sound/bg.mp3" id="6_8sd7b"]
+[ext_resource type="Texture2D" uid="uid://cvet3qwd4qcdm" path="res://background/Other/key.png" id="8_ngqgh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m68p8"]
 size = Vector2(4203.24, 79.5296)
@@ -97,6 +98,11 @@ gizmo_extents = 100.1
 position = Vector2(388.1, 101.1)
 gizmo_extents = 100.1
 
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(92, 93)
+scale = Vector2(0.341528, 0.341528)
+texture = ExtResource("8_ngqgh")
+
 [node name="bg" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_8sd7b")
 volume_db = -10.0
@@ -113,8 +119,20 @@ z_index = 12
 position = Vector2(394, 5)
 gizmo_extents = 127.1
 
+[node name="key" type="Marker2D" parent="."]
+position = Vector2(88, 92)
+
 [node name="E_Label" type="RichTextLabel" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 546.0
+offset_top = 22.0
+offset_right = 586.0
+offset_bottom = 62.0
 text = "E"
 metadata/_edit_use_anchors_ = true
+
+[node name="F_Label" type="RichTextLabel" parent="."]
+offset_left = 586.0
+offset_top = -4.0
+offset_right = 626.0
+offset_bottom = 36.0
+text = "F"

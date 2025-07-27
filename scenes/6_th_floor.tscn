@@ -42,7 +42,7 @@ scale = Vector2(0.203041, 0.203041)
 shape = SubResource("RectangleShape2D_f7rix")
 
 [node name="SpawnFromMap1" type="Marker2D" parent="Sprite2D"]
-position = Vector2(919, 94)
+position = Vector2(933, 99)
 gizmo_extents = 100.1
 
 [node name="SpawnFromMap2" type="Marker2D" parent="Sprite2D"]
@@ -51,7 +51,7 @@ gizmo_extents = 100.1
 
 [node name="btn1" type="Marker2D" parent="."]
 z_as_relative = false
-position = Vector2(925, 11)
+position = Vector2(890, 6)
 gizmo_extents = 91.1
 
 [node name="btn2" type="Marker2D" parent="."]

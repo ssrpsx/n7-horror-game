@@ -187,3 +187,17 @@ limit_right = 0
 limit_bottom = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
+
+[node name="Label" type="Label" parent="player"]
+offset_left = -22.0
+offset_top = -143.0
+offset_right = 18.0
+offset_bottom = -120.667
+text = "/ 6"
+
+[node name="Label2" type="Label" parent="player/Label"]
+layout_mode = 0
+offset_left = -15.0
+offset_right = 25.0
+offset_bottom = 22.3333
+text = "0"
