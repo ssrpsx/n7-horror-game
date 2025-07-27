@@ -7,14 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://dkro5namtdxmp" path="res://background/Cutscene/Lucia_Shock.png" id="4_atbxi"]
 
 [node name="cutscene_win" type="Node2D"]
+position = Vector2(213, 121)
 script = ExtResource("1_x3cl8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(0, -1)
 texture = ExtResource("1_gxn1n")
 
 [node name="Control" type="Control" parent="Sprite2D"]
-visible = false
 z_index = 999
 layout_mode = 3
 anchors_preset = 0
@@ -40,7 +40,7 @@ offset_right = 183.0
 offset_bottom = 105.0
 theme_override_fonts/font = ExtResource("3_u45f7")
 theme_override_font_sizes/font_size = 14
-autowrap_mode = 1
+autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="Sprite2D/Control"]

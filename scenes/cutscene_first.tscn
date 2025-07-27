@@ -1,24 +1,24 @@
-[gd_scene load_steps=6 format=3 uid="uid://og1blwd6vilu"]
+[gd_scene load_steps=6 format=3 uid="uid://fb1lipgyl70c"]
 
-[ext_resource type="Script" uid="uid://wgy2gd05atcv" path="res://scenes/cutscene_end.gd" id="1_r5kfn"]
-[ext_resource type="Texture2D" uid="uid://bk4c3yf03iijb" path="res://background/Cutscene/apple_1.png" id="1_tbgo7"]
-[ext_resource type="Texture2D" uid="uid://ccduvinu3fpdh" path="res://background/Other/box_text.png" id="2_igcyj"]
-[ext_resource type="FontFile" uid="uid://c65t20yr7kka7" path="res://font/MN Ice Cream Vanilla.ttf" id="3_r5kfn"]
-[ext_resource type="Texture2D" uid="uid://dkro5namtdxmp" path="res://background/Cutscene/Lucia_Shock.png" id="5_r5kfn"]
+[ext_resource type="Script" uid="uid://dlc0og1jkt4ya" path="res://scenes/cutscene_first.gd" id="1_7dj54"]
+[ext_resource type="Texture2D" uid="uid://ccduvinu3fpdh" path="res://background/Other/box_text.png" id="2_7dj54"]
+[ext_resource type="Texture2D" uid="uid://bio2dgxnn17w2" path="res://background/Cutscene/Cutscene_first_1.png" id="2_x2urj"]
+[ext_resource type="FontFile" uid="uid://c65t20yr7kka7" path="res://font/MN Ice Cream Vanilla.ttf" id="3_x2urj"]
+[ext_resource type="Texture2D" uid="uid://kkgcy6aho1cb" path="res://background/Cutscene/Lucia_Speak.png" id="5_7dj54"]
 
-[node name="cutscene_end" type="Node2D"]
-position = Vector2(213, 119)
-script = ExtResource("1_r5kfn")
+[node name="cutscene_first" type="Node2D"]
+script = ExtResource("1_7dj54")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, 1)
-texture = ExtResource("1_tbgo7")
+position = Vector2(212, 120)
+texture = ExtResource("2_x2urj")
 
 [node name="Control" type="Control" parent="Sprite2D"]
 z_index = 999
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
+offset_left = 1.0
+offset_right = 41.0
 offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
@@ -28,7 +28,7 @@ offset_left = -213.0
 offset_top = -120.0
 offset_right = 213.0
 offset_bottom = 120.0
-texture = ExtResource("2_igcyj")
+texture = ExtResource("2_7dj54")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Sprite2D/Control"]
@@ -38,7 +38,7 @@ offset_left = -185.0
 offset_top = 40.0
 offset_right = 183.0
 offset_bottom = 105.0
-theme_override_fonts/font = ExtResource("3_r5kfn")
+theme_override_fonts/font = ExtResource("3_x2urj")
 theme_override_font_sizes/font_size = 14
 autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
@@ -56,12 +56,14 @@ metadata/_edit_use_anchors_ = true
 [node name="TextureRect2" type="TextureRect" parent="Sprite2D/Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -4.125
-anchor_right = -4.125
+anchor_left = -4.05
+anchor_top = -0.025
+anchor_right = -4.05
+anchor_bottom = -0.025
 offset_left = -25.0
 offset_top = -73.0
 offset_right = 81.0
 offset_bottom = 33.0
-texture = ExtResource("5_r5kfn")
+texture = ExtResource("5_7dj54")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true

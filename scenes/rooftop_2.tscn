@@ -23,7 +23,6 @@ position = Vector2(5, 0)
 texture = ExtResource("1_wj0v6")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Sprite2D"]
-visible = false
 z_index = 1
 color = Color(0.0509804, 0.0509804, 0.0509804, 0.960784)
 
@@ -80,7 +79,7 @@ offset_bottom = 105.0
 theme_override_fonts/font = ExtResource("6_2kr8f")
 theme_override_font_sizes/font_size = 14
 text = "ไม่ให้ออกนะคร้าบ 555555"
-autowrap_mode = 1
+autowrap_mode = 2
 
 [node name="Label2" type="Label" parent="Sprite2D/Control"]
 layout_mode = 0

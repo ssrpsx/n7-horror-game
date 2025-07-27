@@ -4,13 +4,19 @@ extends Node2D
 @onready var box = $Sprite2D/Control
 
 var messages = [
-	"แต่ถึงจะพูดแบบนั้น ความเจ็บก็ไหลผ่านเข้าร่างกาย มันทำให้เธอตั้งคำถามว่าทำไมเธอถึงไปตาย ๆ ไปแต่แรก",
-	"เธอยื่นมือออกไป ก่อนจะเจอเฮกเตอร์ที่ยืนอยู่ตรงหน้า พร้อมกับรอยยิ้มบาง ๆ"
+	"ลูเซีย “เฮือก!!!” ",
+	"เธอยื่นมือออกไป ก่อนจะเจอเฮกเตอร์ที่ยืนอยู่ตรงหน้า พร้อมกับรอยยิ้มบาง ๆ",
+	"เธอสะดุ้งตื่นขึ้นมากลางดึก ในห้องนอนที่ดูคุ้นเคย",
+	"ตุ๊กตาแพนด้าตกลงมานอนข้าง ๆ เธอ",
+	"ทุกอย่างที่ผ่านมา….เป็นเพียงแค่ความฝัน?",
+	"แต่ก่อนที่เธอจะกลับไปนอนต่อ เธอก็นึกได้ว่า เธอลืมของสำคัญไว้ที่มหาวิทยาลัย",
+	"เธอต้องกลับไปเอา…..?",
+	"THE END จบเกมแล้วคร้าบบบ ขอบคุณที่เล่นจนจบครับ <3"
 ]
 
 func show_message():
 	box.visible = false
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(3).timeout
 	Global.is_paused = true
 
 	for i in range(messages.size()):
@@ -20,7 +26,7 @@ func show_message():
 
 	box.visible = false
 	Global.is_paused = false
-	await get_tree().create_timer(1.5).timeout
+	await get_tree().create_timer(3).timeout
 
 func _ready():
 	show_message()

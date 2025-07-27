@@ -20,7 +20,6 @@ position = Vector2(5, 0)
 texture = ExtResource("1_8058o")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Sprite2D"]
-visible = false
 z_index = 1
 color = Color(0.0509804, 0.0509804, 0.0509804, 0.960784)
 

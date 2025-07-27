@@ -34,9 +34,9 @@ func _ready():
 @onready var canvas = $Sprite2D/CanvasModulate
 
 var message = [
-	"lucia talk \"...หา?\"",
-	"hextor smile “ดูเหมือนเธอจะไม่เข้าใจ เพราะฉะนั้น การที่เธอจะกลับออกไปแบบปลอดภัย คงต้องเอาไว้ก่อน",
-	"lucia talk “นายหมายความว่ายังไง?”",
+	"lucia \"...หา?\"",
+	"hextor “ดูเหมือนเธอจะไม่เข้าใจ เพราะฉะนั้น การที่เธอจะกลับออกไปแบบปลอดภัย คงต้องเอาไว้ก่อน",
+	"lucia “นายหมายความว่ายังไง?”",
 	"lucia shocked \"อึก!?\" ",
 	"ก่อนที่เธอจะรู้สึกตัว เฮกเตอร์ก็เหวี่ยงร่างของเธอก็กระทบกับพื้นแข็ง ๆ ที่อยู่เบื้องล่าง กระดูกของเธอแตกละเอียด ปฏิหาริย์เหลือเกินที่เธอยังหายใจ"
 ]
@@ -51,9 +51,9 @@ func show_message():
 		await get_tree().create_timer(2.5).timeout
 		
 	if Global.score == 6 :
-		get_tree().change_scene_to_file("res://scenes/cutscene_end.tscn")
+		get_tree().change_scene_to_file("res://scenes/cutscene_win.tscn")
 	else :
-		get_tree().change_scene_to_file("res://scenes/1_st_front_uni.tscn")
+		get_tree().change_scene_to_file("res://scenes/cutscene_end.tscn")
 	
 func hidden_message():
 	box.visible = false

@@ -10,7 +10,7 @@ var messages = [
 
 func show_message():
 	box.visible = false
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(3).timeout
 	Global.is_paused = true
 
 	for i in range(messages.size()):
