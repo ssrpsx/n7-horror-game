@@ -65,9 +65,6 @@ func _process(_delta):
 	var is_near_btn1 = distance_btn1 <= 80
 	var is_near_btn2 = distance_btn2 <= 80
 	
-	print(typeof(player_instance))  # ควรแสดง 17 (Object) หรือ 13 (Node)
-	print(player_instance)
-	
 	if is_near_btn1:
 		e_label.global_position = btn1.global_position
 	elif is_near_btn2:

@@ -1,9 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://xkvh2ptbh1mq"]
+[gd_scene load_steps=10 format=3 uid="uid://xkvh2ptbh1mq"]
 
 [ext_resource type="Script" uid="uid://dos6skm0l0hn1" path="res://scenes/rooftop_2.gd" id="1_sjoax"]
 [ext_resource type="Texture2D" uid="uid://cdm2h84qoxweb" path="res://background/N7/Rooftop_2.png" id="1_wj0v6"]
 [ext_resource type="AudioStream" uid="uid://bl17882kv7bjh" path="res://sound/bg.mp3" id="2_sjoax"]
 [ext_resource type="Texture2D" uid="uid://bubqk12ba38fc" path="res://sprite/34_hextor.png" id="3_dr63j"]
+[ext_resource type="Texture2D" uid="uid://ccduvinu3fpdh" path="res://background/Other/box_text.png" id="5_kcgrk"]
+[ext_resource type="FontFile" uid="uid://c65t20yr7kka7" path="res://font/MN Ice Cream Vanilla.ttf" id="6_2kr8f"]
+[ext_resource type="Texture2D" uid="uid://d2ekay3112tp8" path="res://background/Cutscene/Hextor_Talk.png" id="6_kymfj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dr63j"]
 size = Vector2(4191.27, 67.9025)
@@ -49,6 +52,53 @@ gizmo_extents = 100.1
 [node name="Sprite2D2" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(-393, 46)
 texture = ExtResource("3_dr63j")
+
+[node name="Control" type="Control" parent="Sprite2D"]
+visible = false
+z_index = 999
+layout_mode = 3
+anchors_preset = 0
+offset_left = -208.0
+offset_right = -168.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = -213.0
+offset_top = -120.0
+offset_right = 213.0
+offset_bottom = 120.0
+texture = ExtResource("5_kcgrk")
+
+[node name="Label" type="Label" parent="Sprite2D/Control"]
+z_index = 999
+layout_mode = 0
+offset_left = -185.0
+offset_top = 40.0
+offset_right = 183.0
+offset_bottom = 105.0
+theme_override_fonts/font = ExtResource("6_2kr8f")
+theme_override_font_sizes/font_size = 14
+text = "ไม่ให้ออกนะคร้าบ 555555"
+autowrap_mode = 1
+
+[node name="Label2" type="Label" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 94.0
+offset_right = 197.0
+offset_bottom = 112.146
+theme_override_font_sizes/font_size = 10
+text = "X"
+
+[node name="TextureRect2" type="TextureRect" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = -25.0
+offset_top = -73.0
+offset_right = 81.0
+offset_bottom = 33.0
+texture = ExtResource("6_kymfj")
+expand_mode = 1
 
 [node name="btn1" type="Marker2D" parent="."]
 z_as_relative = false

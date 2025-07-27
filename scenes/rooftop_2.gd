@@ -29,6 +29,38 @@ func _ready():
 	
 	e_label.visible = false
 
+@onready var label = $Sprite2D/Control/Label
+@onready var box = $Sprite2D/Control
+@onready var canvas = $Sprite2D/CanvasModulate
+
+var message = [
+	"lucia talk \"...หา?\"",
+	"hextor smile “ดูเหมือนเธอจะไม่เข้าใจ เพราะฉะนั้น การที่เธอจะกลับออกไปแบบปลอดภัย คงต้องเอาไว้ก่อน",
+	"lucia talk “นายหมายความว่ายังไง?”",
+	"lucia shocked \"อึก!?\" ",
+	"ก่อนที่เธอจะรู้สึกตัว เฮกเตอร์ก็เหวี่ยงร่างของเธอก็กระทบกับพื้นแข็ง ๆ ที่อยู่เบื้องล่าง กระดูกของเธอแตกละเอียด ปฏิหาริย์เหลือเกินที่เธอยังหายใจ"
+]
+
+func show_message():
+	box.visible = true
+	Global.is_paused = true
+	canvas.visible = false
+	
+	for i in range(0, 5) :
+		label.text = message[i];
+		await get_tree().create_timer(2.5).timeout
+		
+	if Global.score == 6 :
+		get_tree().change_scene_to_file("res://scenes/cutscene_end.tscn")
+	else :
+		get_tree().change_scene_to_file("res://scenes/1_st_front_uni.tscn")
+	
+func hidden_message():
+	box.visible = false
+	canvas.visible = true
+	
+	Global.is_paused = false
+
 func _process(_delta):
 	if not player_instance:
 		return
@@ -58,8 +90,10 @@ func _process(_delta):
 	
 	if Input.is_action_just_pressed("interact"):
 		if is_near_btn1:
-			Global.prev_scene_name = "rooftop_2"
-			get_tree().change_scene_to_file("res://scenes/elevator_btn.tscn")
+			show_message()
 		elif is_near_btn2:
 			Global.prev_scene_name = "rooftop_2"
 			get_tree().change_scene_to_file("res://scenes/rooftop_1.tscn")
+			
+	if Input.is_action_just_pressed("closeMessage"):
+		hidden_message()

@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://dl6xu1fsogp7u"]
+
+[ext_resource type="Texture2D" uid="uid://58i8u6mp6nn2" path="res://background/Cutscene/awake_lucia.png" id="1_gxn1n"]
+[ext_resource type="Script" uid="uid://ut1iakf6ppyc" path="res://scenes/cutscene_win.gd" id="1_x3cl8"]
+[ext_resource type="Texture2D" uid="uid://ccduvinu3fpdh" path="res://background/Other/box_text.png" id="2_x3cl8"]
+[ext_resource type="FontFile" uid="uid://c65t20yr7kka7" path="res://font/MN Ice Cream Vanilla.ttf" id="3_u45f7"]
+[ext_resource type="Texture2D" uid="uid://dkro5namtdxmp" path="res://background/Cutscene/Lucia_Shock.png" id="4_atbxi"]
+
+[node name="cutscene_win" type="Node2D"]
+script = ExtResource("1_x3cl8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+texture = ExtResource("1_gxn1n")
+
+[node name="Control" type="Control" parent="Sprite2D"]
+visible = false
+z_index = 999
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = -213.0
+offset_top = -120.0
+offset_right = 213.0
+offset_bottom = 120.0
+texture = ExtResource("2_x3cl8")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Sprite2D/Control"]
+z_index = 999
+layout_mode = 0
+offset_left = -185.0
+offset_top = 40.0
+offset_right = 183.0
+offset_bottom = 105.0
+theme_override_fonts/font = ExtResource("3_u45f7")
+theme_override_font_sizes/font_size = 14
+autowrap_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 94.0
+offset_right = 197.0
+offset_bottom = 112.146
+theme_override_font_sizes/font_size = 10
+text = "X"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="Sprite2D/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -4.125
+anchor_right = -4.125
+offset_left = -25.0
+offset_top = -73.0
+offset_right = 81.0
+offset_bottom = 33.0
+texture = ExtResource("4_atbxi")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
