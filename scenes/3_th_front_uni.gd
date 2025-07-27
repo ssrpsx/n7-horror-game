@@ -1,5 +1,6 @@
 extends Node2D
 
+@onready var player_spawn_from_map1 = $Sprite2D/SpawnFromMap1
 @onready var player_spawn_from_map2 = $Sprite2D/SpawnFromMap2
 var player_scene = preload("res://scenes/player.tscn")
 var player_instance
@@ -16,13 +17,15 @@ func _ready():
 	body = player_instance.get_node("player");
 	
 	match Global.prev_scene_name:
-		_:
+		"2_rd_front_uni":
 			body.global_position = player_spawn_from_map2.global_position
 			body.get_node("AnimatedSprite2D").flip_h = true
+		_:
+			body.global_position = player_spawn_from_map1.global_position
 	player_instance.z_index = 10
 
 	var camera = player_instance.get_node("player/Camera2D")
-	camera.limit_left = -416
+	camera.limit_left = -415
 	camera.limit_right = 425
 	camera.limit_top = -120
 	camera.limit_bottom = 0
@@ -58,8 +61,8 @@ func _process(_delta):
 	
 	if Input.is_action_just_pressed("interact"):
 		if is_near_btn1:
-			Global.prev_scene_name = "rooftop_2"
-			get_tree().change_scene_to_file("res://scenes/elevator_btn.tscn")
+			Global.prev_scene_name = "3_th_front_uni"
+			get_tree().change_scene_to_file("res://scenes/1_st_floor_1.tscn")
 		elif is_near_btn2:
-			Global.prev_scene_name = "rooftop_2"
-			get_tree().change_scene_to_file("res://scenes/rooftop_1.tscn")
+			Global.prev_scene_name = "3_th_front_uni"
+			get_tree().change_scene_to_file("res://scenes/2_rd_front_uni.tscn")

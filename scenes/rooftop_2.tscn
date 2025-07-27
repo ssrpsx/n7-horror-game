@@ -41,10 +41,6 @@ position = Vector2(-412, -3)
 scale = Vector2(0.203041, 0.203041)
 shape = SubResource("RectangleShape2D_4hvyl")
 
-[node name="SpawnFromMap1" type="Marker2D" parent="Sprite2D"]
-position = Vector2(-358, 103)
-gizmo_extents = 100.1
-
 [node name="SpawnFromMap2" type="Marker2D" parent="Sprite2D"]
 position = Vector2(364, 104)
 gizmo_extents = 100.1

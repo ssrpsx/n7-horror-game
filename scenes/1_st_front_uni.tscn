@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://d12txpnlvfqup" path="res://background/N7/1_st_front_uni.png" id="1_mbm37"]
 [ext_resource type="AudioStream" uid="uid://bl17882kv7bjh" path="res://sound/bg.mp3" id="2_k6jbc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2634n"]
-size = Vector2(2103.02, 83.7269)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k6jbc"]
+size = Vector2(2103.02, 77.9128)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_se1qj"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2634n"]
 size = Vector2(9.1377, 1194.42)
 
 [node name="1_st_front_uni" type="Node2D"]
@@ -27,27 +27,31 @@ color = Color(0.0509804, 0.0509804, 0.0509804, 0.960784)
 position = Vector2(-5, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(5.49999, 111.5)
+position = Vector2(5.49999, 111.91)
+scale = Vector2(0.203041, 0.203041)
+shape = SubResource("RectangleShape2D_k6jbc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
+position = Vector2(218, -2)
 scale = Vector2(0.203041, 0.203041)
 shape = SubResource("RectangleShape2D_2634n")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(219, -2)
-scale = Vector2(0.203041, 0.203041)
-shape = SubResource("RectangleShape2D_se1qj")
-
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
-position = Vector2(-180, -2)
+position = Vector2(-174, -1)
 scale = Vector2(0.203041, 0.203041)
-shape = SubResource("RectangleShape2D_se1qj")
+shape = SubResource("RectangleShape2D_2634n")
 
 [node name="SpawnFromMap1" type="Marker2D" parent="Sprite2D"]
-position = Vector2(-132, 103)
+position = Vector2(-130, 103)
+gizmo_extents = 100.1
+
+[node name="SpawnFromMap2" type="Marker2D" parent="Sprite2D"]
+position = Vector2(188, 103)
 gizmo_extents = 100.1
 
 [node name="btn1" type="Marker2D" parent="."]
 z_as_relative = false
-position = Vector2(-164.9, 9.1)
+position = Vector2(-162.9, 2.1)
 gizmo_extents = 91.1
 
 [node name="E_Label" type="RichTextLabel" parent="."]

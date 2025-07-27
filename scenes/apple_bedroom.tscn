@@ -40,3 +40,5 @@ shape = SubResource("RectangleShape2D_f3ucf")
 position = Vector2(-206.964, -0.129063)
 scale = Vector2(0.203041, 0.203041)
 shape = SubResource("RectangleShape2D_f3ucf")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]

@@ -70,4 +70,4 @@ func _process(_delta):
 			get_tree().change_scene_to_file("res://scenes/elevator_btn.tscn")
 		elif is_near_btn2:
 			Global.prev_scene_name = "7th-front-elevator"
-			get_tree().change_scene_to_file("res://scenes/6_th_floor.tscn")
+			get_tree().change_scene_to_file("res://scenes/7_th_floor.tscn")

@@ -7,6 +7,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var camera = $Camera2D
 
 var flashlight_on = false
+var is_paused = false
 
 func _input(event):
 	if event.is_action_pressed("ui_select"):
@@ -25,6 +26,8 @@ func toggle_flashlight():
 			light.texture = preload("res://sprite/flashlight_right.png")
 
 func _physics_process(delta):
+	if Global.is_paused == true:
+		return
 	if not is_on_floor():
 		velocity.y += gravity * delta
 

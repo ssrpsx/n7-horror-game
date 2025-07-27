@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://f48kg2m2jay1"]
+[gd_scene load_steps=8 format=3 uid="uid://f48kg2m2jay1"]
 
 [ext_resource type="Texture2D" uid="uid://ccgqhmnt7xyui" path="res://background/N7/_N7-1floor_2.png" id="1_gqne8"]
 [ext_resource type="Script" uid="uid://ceaxuseva3w3o" path="res://scenes/1_st_floor_2.gd" id="1_iig33"]
+[ext_resource type="Texture2D" uid="uid://ccduvinu3fpdh" path="res://background/Other/box_text.png" id="3_0h444"]
 [ext_resource type="AudioStream" uid="uid://bl17882kv7bjh" path="res://sound/bg.mp3" id="3_he01u"]
+[ext_resource type="FontFile" uid="uid://c65t20yr7kka7" path="res://font/MN Ice Cream Vanilla.ttf" id="4_t8tad"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8yym"]
 size = Vector2(2093.17, 67.9025)
@@ -43,12 +45,48 @@ scale = Vector2(0.203041, 0.203041)
 shape = SubResource("RectangleShape2D_loguq")
 
 [node name="SpawnFromMap1" type="Marker2D" parent="Sprite2D"]
-position = Vector2(-177, 107)
+position = Vector2(-140, 106)
 gizmo_extents = 100.1
 
 [node name="SpawnFromMap2" type="Marker2D" parent="Sprite2D"]
 position = Vector2(179, 107)
 gizmo_extents = 100.1
+
+[node name="Control" type="Control" parent="Sprite2D"]
+z_index = 999
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = -213.0
+offset_top = -120.0
+offset_right = 213.0
+offset_bottom = 120.0
+texture = ExtResource("3_0h444")
+
+[node name="Label" type="Label" parent="Sprite2D/Control"]
+z_index = 999
+layout_mode = 0
+offset_left = -185.0
+offset_top = 40.0
+offset_right = 183.0
+offset_bottom = 105.0
+theme_override_fonts/font = ExtResource("4_t8tad")
+theme_override_font_sizes/font_size = 14
+text = "ไม่ให้ออกนะคร้าบ 555555"
+autowrap_mode = 1
+
+[node name="Label2" type="Label" parent="Sprite2D/Control"]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 94.0
+offset_right = 197.0
+offset_bottom = 112.146
+theme_override_font_sizes/font_size = 10
+text = "X"
 
 [node name="btn1" type="Marker2D" parent="."]
 z_as_relative = false

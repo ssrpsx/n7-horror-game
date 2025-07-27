@@ -19,10 +19,7 @@ func _ready():
 	match Global.prev_scene_name:
 		"cutscene_elevator":
 			body.global_position = player_spawn_from_map1.global_position
-		"6_th_floor":
-			body.get_node("AnimatedSprite2D").flip_h = true
-			body.global_position = player_spawn_from_map2.global_position
-		"7_th_floor":
+		"rooftop_1":
 			body.get_node("AnimatedSprite2D").flip_h = true
 			body.global_position = player_spawn_from_map2.global_position
 		_:
@@ -70,4 +67,4 @@ func _process(_delta):
 			get_tree().change_scene_to_file("res://scenes/elevator_btn.tscn")
 		elif is_near_btn2:
 			Global.prev_scene_name = "10th-front-elevator"
-			get_tree().change_scene_to_file("res://scenes/6_th_floor.tscn")
+			get_tree().change_scene_to_file("res://scenes/rooftop_1.tscn")

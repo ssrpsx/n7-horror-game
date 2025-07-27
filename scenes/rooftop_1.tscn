@@ -46,7 +46,7 @@ position = Vector2(-285, 103)
 gizmo_extents = 100.1
 
 [node name="SpawnFromMap2" type="Marker2D" parent="Sprite2D"]
-position = Vector2(131.1, 103.1)
+position = Vector2(206, 104)
 gizmo_extents = 100.1
 
 [node name="btn1" type="Marker2D" parent="."]

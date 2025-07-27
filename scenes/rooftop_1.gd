@@ -17,9 +17,7 @@ func _ready():
 	body = player_instance.get_node("player");
 	
 	match Global.prev_scene_name:
-		"cutscene_elevator":
-			body.global_position = player_spawn_from_map1.global_position
-		"1_st_floor1":
+		"10th-front-elevator":
 			body.get_node("AnimatedSprite2D").flip_h = true
 			body.global_position = player_spawn_from_map2.global_position
 		_:
@@ -63,8 +61,8 @@ func _process(_delta):
 	
 	if Input.is_action_just_pressed("interact"):
 		if is_near_btn1:
-			Global.prev_scene_name = "1_st_floor2"
-			get_tree().change_scene_to_file("res://scenes/elevator_btn.tscn")
+			Global.prev_scene_name = "rooftop_1"
+			get_tree().change_scene_to_file("res://scenes/rooftop_2.tscn")
 		elif is_near_btn2:
-			Global.prev_scene_name = "1_st_floor2"
-			get_tree().change_scene_to_file("res://scenes/1_st_floor_1.tscn")
+			Global.prev_scene_name = "rooftop_1"
+			get_tree().change_scene_to_file("res://scenes/10_th_front_elevator.tscn")

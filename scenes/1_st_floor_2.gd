@@ -16,6 +16,9 @@ func _ready():
 	add_child(player_instance)
 	body = player_instance.get_node("player");
 	
+	if(Global.close_door) :
+		$Sprite2D.texture = load("res://background/N7/_N7-1floor_2_Close.png")
+	
 	match Global.prev_scene_name:
 		"cutscene_elevator":
 			body.global_position = player_spawn_from_map1.global_position
@@ -33,6 +36,23 @@ func _ready():
 	camera.limit_bottom = 0
 	
 	e_label.visible = false
+	
+@onready var label = $Sprite2D/Control/Label
+@onready var box = $Sprite2D/Control
+@onready var canvas = $Sprite2D/CanvasModulate
+
+func show_message():
+	box.visible = true
+	label.text = "ไม่ให้ออกนะคร้าบ 55555"
+	canvas.visible = false
+	
+	Global.is_paused = true
+	
+func hidden_message():
+	box.visible = false
+	canvas.visible = true
+	
+	Global.is_paused = false
 
 func _process(_delta):
 	if not player_instance:
@@ -44,6 +64,9 @@ func _process(_delta):
 
 	var is_near_btn1 = distance_btn1 <= 80
 	var is_near_btn2 = distance_btn2 <= 80
+	
+	print(typeof(player_instance))  # ควรแสดง 17 (Object) หรือ 13 (Node)
+	print(player_instance)
 	
 	if is_near_btn1:
 		e_label.global_position = btn1.global_position
@@ -65,6 +88,12 @@ func _process(_delta):
 		if is_near_btn1:
 			Global.prev_scene_name = "1_st_floor2"
 			get_tree().change_scene_to_file("res://scenes/elevator_btn.tscn")
-		elif is_near_btn2:
+			Global.close_door = true
+		elif is_near_btn2 and Global.close_door == false:
 			Global.prev_scene_name = "1_st_floor2"
 			get_tree().change_scene_to_file("res://scenes/1_st_floor_1.tscn")
+		elif is_near_btn2 and Global.close_door == true:
+			show_message()
+	
+	if Input.is_action_just_pressed("closeMessage"):
+		hidden_message()

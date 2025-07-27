@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var player_spawn_from_map1 = $Sprite2D/SpawnFromMap1
+@onready var player_spawn_from_map2 = $Sprite2D/SpawnFromMap2
 var player_scene = preload("res://scenes/player.tscn")
 var player_instance
 var body
@@ -15,10 +16,11 @@ func _ready():
 	body = player_instance.get_node("player");
 	
 	match Global.prev_scene_name:
-		"cutscene_elevator":
+		"2_rd_front_uni":
 			body.global_position = player_spawn_from_map1.global_position
 		_:
-			body.global_position = player_spawn_from_map1.global_position
+			body.global_position = player_spawn_from_map2.global_position
+			body.get_node("AnimatedSprite2D").flip_h = true
 	player_instance.z_index = 10
 
 	var camera = player_instance.get_node("player/Camera2D")
@@ -54,5 +56,5 @@ func _process(_delta):
 	
 	if Input.is_action_just_pressed("interact"):
 		if is_near_btn1:
-			Global.prev_scene_name = "1_st_floor2"
-			get_tree().change_scene_to_file("res://scenes/elevator_btn.tscn")
+			Global.prev_scene_name = "1_st_front_uni"
+			get_tree().change_scene_to_file("res://scenes/2_rd_front_uni.tscn")

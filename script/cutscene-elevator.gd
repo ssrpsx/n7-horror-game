@@ -148,7 +148,7 @@ func _ready():
 					Global.prev_scene_name = "7th-front-elevator"
 					get_tree().change_scene_to_file("res://scenes/1_st_floor_2.tscn")
 				"6th-front-elevator":
-					for i in range(6, 0, -1):
+					for i in range(7, 5, -1):
 						sound.play()
 						texture = load("res://background/Cutscene/elevator/down/%s.png" % i)
 						timer.start(2)
@@ -165,7 +165,7 @@ func _ready():
 					get_tree().change_scene_to_file("res://scenes/6_th_front_elevator.tscn")
 				"10th-front-elevator":
 					var frames = 10
-					for i in range(1, frames + 1):
+					for i in range(7, frames + 1):
 						sound.play()
 						texture = load("res://background/Cutscene/elevator/%s.png" % i)
 						timer.start(2)
@@ -199,7 +199,7 @@ func _ready():
 					Global.prev_scene_name = "10th-front-elevator"
 					get_tree().change_scene_to_file("res://scenes/1_st_floor_2.tscn")
 				"6th-front-elevator":
-					for i in range(6, 0, -1):
+					for i in range(10, 5, -1):
 						sound.play()
 						texture = load("res://background/Cutscene/elevator/down/%s.png" % i)
 						timer.start(2)
@@ -215,7 +215,7 @@ func _ready():
 					Global.prev_scene_name = "10th-front-elevator"
 					get_tree().change_scene_to_file("res://scenes/6_th_front_elevator.tscn")
 				"7th-front-elevator":
-					for i in range(7, 0, -1):
+					for i in range(10, 6, -1):
 						sound.play()
 						texture = load("res://background/Cutscene/elevator/down/%s.png" % i)
 						timer.start(2)

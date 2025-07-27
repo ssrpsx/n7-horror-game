@@ -17,12 +17,9 @@ func _ready():
 	body = player_instance.get_node("player");
 	
 	match Global.prev_scene_name:
-		"1_st_floor1":
+		"3_th_front_uni":
 			body.get_node("AnimatedSprite2D").flip_h = true
 			body.global_position = player_spawn_from_map2.global_position
-		"front-uni":
-			body.get_node("AnimatedSprite2D").flip_h = true
-			body.global_position = player_spawn_from_map1.global_position
 		_:
 			body.global_position = player_spawn_from_map1.global_position
 	player_instance.z_index = 10
@@ -68,4 +65,4 @@ func _process(_delta):
 			get_tree().change_scene_to_file("res://scenes/1_st_floor_2.tscn")
 		elif is_near_btn2:
 			Global.prev_scene_name = "1_st_floor1"
-			get_tree().change_scene_to_file("res://scenes/1_st_floor_2.tscn")
+			get_tree().change_scene_to_file("res://scenes/3_th_front_uni.tscn")
