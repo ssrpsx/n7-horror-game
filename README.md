@@ -1,6 +1,6 @@
 # N7 HORROR Game
 
-**Midnight Shadows** is a 2D pixel art story-driven horror game created by a team of 6 students during our first year at university. The project is a blend of storytelling, suspense, and psychological horror, wrapped in nostalgic pixel-style visuals.
+**N7 HORROR Game** is a 2D pixel art story-driven horror game created by a team of 6 students during our first year at university. The project is a blend of storytelling, suspense, and psychological horror, wrapped in nostalgic pixel-style visuals.
 
 ## 🎮 Game Concept
 
