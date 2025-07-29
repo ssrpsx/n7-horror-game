@@ -31,8 +31,10 @@ Will Lucia escape? Or will she be caught in the darkness that stalks the univers
 Waiting for development
 
 <img src="readme-image/1.png" alt="Desktop Trips">
+<img src="readme-image/2.png" alt="Desktop Trips">
+<img src="readme-image/awake_lucia.png" alt="Desktop Trips">
 
-## 📦 Build
-Coming soon to Android on Google PlayStore!
+## 📌 SHOWCASE
+Watch on youtube : <a href="https://youtu.be/HGPCUkErihg">Click</a> 
 
 ---
