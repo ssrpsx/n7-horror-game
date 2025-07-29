@@ -35,7 +35,7 @@ func show_message():
 		label.text = messages[i]
 		await get_tree().create_timer(3).timeout
 		
-	await get_tree().create_timer(3).timeout
+	await get_tree().create_timer(2).timeout
 	Global.prev_scene_name = "first"
 	get_tree().change_scene_to_file("res://scenes/apple_bedroom.tscn")
 

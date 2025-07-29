@@ -26,7 +26,6 @@ func ft_update():
 		
 func _ready():
 	await get_tree().process_frame
-	Label_score.text = str(Global.score)
 	ft_update()
 	
 func _input(event):
@@ -90,4 +89,5 @@ func _physics_process(delta):
 	else:
 		camera.position = sprite.position + Vector2(118, 0)
 		
+	Label_score.text = str(Global.score)
 	move_and_slide()
