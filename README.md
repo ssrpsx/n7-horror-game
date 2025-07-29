@@ -35,4 +35,4 @@ Waiting for development
 <img src="readme-image/awake_lucia.png" alt="Desktop Trips" width="1080px">
 
 ## 📌 SHOWCASE
-Watch on youtube : <a href="https://youtu.be/HGPCUkErihg">Click</a> 
+Watch on youtube : <a href="https://youtu.be/HGPCUkErihg">Click here</a> 
