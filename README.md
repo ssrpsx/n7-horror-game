@@ -30,11 +30,9 @@ Will Lucia escape? Or will she be caught in the darkness that stalks the univers
 ## 📷 Screenshots
 Waiting for development
 
-<img src="readme-image/1.png" alt="Desktop Trips">
-<img src="readme-image/2.png" alt="Desktop Trips">
-<img src="readme-image/awake_lucia.png" alt="Desktop Trips">
+<img src="readme-image/1.png" alt="Desktop Trips" width="1080px">
+<img src="readme-image/2.png" alt="Desktop Trips" width="1080px">
+<img src="readme-image/awake_lucia.png" alt="Desktop Trips" width="1080px">
 
 ## 📌 SHOWCASE
 Watch on youtube : <a href="https://youtu.be/HGPCUkErihg">Click</a> 
-
----
